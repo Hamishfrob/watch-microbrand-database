@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.81.0",
     "xlsx": "^0.18.5"
   }
 }
