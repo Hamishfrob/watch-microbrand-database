@@ -1,8 +1,9 @@
 // scripts/enrich-pass2.js
-// Pass 2: For brands in other.json still missing country, fetches their website
-// and uses Claude to extract country, city, price range, Instagram, founded year, notes.
+// Pass 2: Enriches brands remaining in other.json with null country.
+// Mode A: fetches website HTML for brands that have a URL.
+// Mode B: asks Claude (knowledge only) for country/website/notes for brands without a URL.
 // Run: node scripts/enrich-pass2.js
-// Run with limit: node scripts/enrich-pass2.js --limit 20
+// Run with limit: node scripts/enrich-pass2.js --limit 50
 
 require('dotenv').config({ override: true });
 
@@ -61,24 +62,21 @@ function save(filename, data) {
   fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(data, null, 2), 'utf8');
 }
 
+// ─── Mode A: Website fetch ────────────────────────────────────────────────────
+
 function fetchPage(url) {
   return new Promise((resolve) => {
     let done = false;
     function finish(val) { if (!done) { done = true; resolve(val); } }
-
     let urlObj;
     try { urlObj = new URL(url); } catch { return finish(null); }
     const lib = urlObj.protocol === 'https:' ? https : http;
-
     const req = lib.get(url, {
       timeout: TIMEOUT_MS,
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; WatchDBEnricher/1.0)' }
     }, res => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        try {
-          const redirect = new URL(res.headers.location, url).href;
-          fetchPage(redirect).then(finish);
-        } catch { finish(null); }
+        try { fetchPage(new URL(res.headers.location, url).href).then(finish); } catch { finish(null); }
         return;
       }
       if (res.statusCode < 200 || res.statusCode >= 400) return finish(null);
@@ -105,46 +103,53 @@ function stripHtml(html) {
     .slice(0, 8000);
 }
 
-async function enrichBrand(client, brand, html) {
+async function enrichFromWebsite(client, brand, html) {
   const instagram = extractInstagram(html);
   const text = stripHtml(html);
-
-  const prompt = `You are analysing the website of a watch brand called "${brand.brandName}".
+  const message = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 512,
+    messages: [{ role: 'user', content: `You are analysing the website of a watch brand called "${brand.brandName}".
 
 Website content (truncated):
 ---
 ${text}
 ---
 
-Extract the following. Return ONLY valid JSON, no markdown, no explanation.
+Return ONLY valid JSON, no markdown:
+{"country":"country where brand is based (standard English name)","townCity":"city or null","foundedYear":year or null,"priceRangeLow":USD integer or null,"priceRangeHigh":USD integer or null,"notes":"1-3 sentences: brand style, movement type, anything distinctive."}
 
-{
-  "country": "country where brand is based (standard English name e.g. United States, United Kingdom, Germany)",
-  "townCity": "city or town name only, or null",
-  "foundedYear": year as integer or null,
-  "priceRangeLow": lowest watch price in USD as integer or null,
-  "priceRangeHigh": highest watch price in USD as integer or null,
-  "notes": "1-3 sentences: what the brand makes, their style, movement type, anything distinctive. Factual, concise."
-}
-
-Rules:
-- Use null for any value you cannot confidently determine from the content
-- Infer country from address, About page, contact details, or domain (.de=Germany, .co.uk=UK, .fr=France etc.)
-- Convert non-USD prices to USD if needed (approximate is fine)
-- notes style: "British microbrand founded in 2018. Known for field watches with Swiss movements. Prices from $350."`;
-
-  const message = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
-    max_tokens: 512,
-    messages: [{ role: 'user', content: prompt }],
+Use null for anything you cannot confidently determine. Infer country from address, About page, domain (.de=Germany, .co.uk=UK etc.).` }],
   });
-
-  const raw = message.content[0].text.trim()
-    .replace(/^```json?\s*/i, '').replace(/\s*```$/i, '').trim();
+  const raw = message.content[0].text.trim().replace(/^```json?\s*/i,'').replace(/\s*```$/i,'').trim();
   const result = JSON.parse(raw);
   if (instagram && !result.instagramHandle) result.instagramHandle = instagram;
   return result;
 }
+
+// ─── Mode B: Knowledge lookup (no website) ───────────────────────────────────
+
+const MODE_B_SYSTEM = `You are a watch industry expert. For each brand name, return what you know about it.
+
+Return a JSON array. For each brand:
+- If you recognise it as a microbrand or independent watch brand: {"brandName":"...","country":"country (standard English name)","website":"https://... or null","notes":"1-3 factual sentences about the brand."}
+- If you do not recognise it or are unsure: {"brandName":"...","country":null,"website":null,"notes":null}
+
+Do NOT guess or fabricate. Return ONLY a valid JSON array, no markdown.`;
+
+async function enrichFromKnowledge(client, brands) {
+  const names = brands.map(b => b.brandName);
+  const message = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 8192,
+    messages: [{ role: 'user', content: `Look up these watch brands:\n${JSON.stringify(names)}` }],
+    system: MODE_B_SYSTEM,
+  });
+  const text = message.content[0].text.trim().replace(/^```json?\s*/i,'').replace(/\s*```$/i,'').trim();
+  return JSON.parse(text);
+}
+
+// ─── Main ────────────────────────────────────────────────────────────────────
 
 async function run() {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -154,70 +159,84 @@ async function run() {
     regionData[region] = load(filename);
   }
 
-  const toProcess = regionData['other']
-    .filter(b => !b.country && b.website && b.website.startsWith('http'))
-    .slice(0, LIMIT);
+  const nullCountry = regionData['other'].filter(b => !b.country);
+  const withUrl     = nullCountry.filter(b => b.website && b.website.startsWith('http')).slice(0, LIMIT);
+  const withoutUrl  = nullCountry.filter(b => !b.website || !b.website.startsWith('http')).slice(0, Math.max(0, LIMIT - withUrl.length));
 
-  const noWebsite = regionData['other'].filter(
-    b => !b.country && (!b.website || !b.website.startsWith('http'))
-  );
+  console.log(`Pass 2:`);
+  console.log(`  Mode A (website fetch):     ${withUrl.length} brands`);
+  console.log(`  Mode B (knowledge lookup):  ${withoutUrl.length} brands`);
 
-  console.log(`Pass 2: ${toProcess.length} brands to enrich via website fetch`);
-  console.log(`        ${noWebsite.length} brands have no website (flagging for manual review)`);
+  let enriched = 0, moved = 0, failed = 0, unknownCount = 0;
+  const processedNames = new Set([...withUrl, ...withoutUrl].map(b => b.brandName.toLowerCase()));
 
-  // Flag no-website brands
-  for (const b of noWebsite) {
-    if (!b.notes) b.notes = 'No website — manual review needed';
+  // ── Mode A ──
+  if (withUrl.length > 0) {
+    console.log('\nMode A: fetching websites...');
+    for (let i = 0; i < withUrl.length; i += CONCURRENCY) {
+      const batch = withUrl.slice(i, i + CONCURRENCY);
+      await Promise.all(batch.map(async (brand) => {
+        try {
+          const html = await fetchPage(brand.website);
+          if (!html) { brand.notes = brand.notes || 'Website unreachable'; failed++; return; }
+          const result = await enrichFromWebsite(client, brand, html);
+          if (result.country)         brand.country         = result.country;
+          if (result.townCity)        brand.townCity        = result.townCity;
+          if (result.foundedYear)     brand.foundedYear     = result.foundedYear;
+          if (result.priceRangeLow)   brand.priceRangeLow   = result.priceRangeLow;
+          if (result.priceRangeHigh)  brand.priceRangeHigh  = result.priceRangeHigh;
+          if (result.notes)           brand.notes           = result.notes;
+          if (result.instagramHandle) brand.instagramHandle = result.instagramHandle;
+          enriched++;
+          if (brand.country) {
+            const region = COUNTRY_TO_REGION[brand.country] || 'other';
+            if (region !== 'other') { regionData[region].push(brand); moved++; }
+          }
+        } catch (err) { brand.notes = brand.notes || `Error: ${err.message}`; failed++; }
+        process.stdout.write(`\r  [${withUrl.indexOf(brand)+1}/${withUrl.length}] ${brand.brandName.slice(0,40).padEnd(42)}`);
+      }));
+    }
+    process.stdout.write('\n');
   }
 
-  let enriched = 0, failed = 0, moved = 0;
-  const processedNames = new Set(toProcess.map(b => b.brandName.toLowerCase()));
-
-  // Process in batches of CONCURRENCY
-  for (let i = 0; i < toProcess.length; i += CONCURRENCY) {
-    const batch = toProcess.slice(i, i + CONCURRENCY);
-    await Promise.all(batch.map(async (brand) => {
-      const idx = toProcess.indexOf(brand) + 1;
+  // ── Mode B ──
+  if (withoutUrl.length > 0) {
+    console.log('\nMode B: knowledge lookup...');
+    const BATCH_SIZE = 50;
+    for (let i = 0; i < withoutUrl.length; i += BATCH_SIZE) {
+      const batch = withoutUrl.slice(i, i + BATCH_SIZE);
+      const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+      const totalBatches = Math.ceil(withoutUrl.length / BATCH_SIZE);
+      process.stdout.write(`\r  Batch ${batchNum}/${totalBatches}...`);
+      let results;
       try {
-        const html = await fetchPage(brand.website);
-        if (!html) {
-          brand.notes = brand.notes || 'Website unreachable — manual review needed';
-          failed++;
-          process.stdout.write(`\r  [${idx}/${toProcess.length}] FAIL: ${brand.brandName.slice(0,30).padEnd(32)}`);
-          return;
-        }
-
-        const result = await enrichBrand(client, brand, html);
-
-        if (result.country)          brand.country          = result.country;
-        if (result.townCity)         brand.townCity         = result.townCity;
-        if (result.foundedYear)      brand.foundedYear      = result.foundedYear;
-        if (result.priceRangeLow)    brand.priceRangeLow    = result.priceRangeLow;
-        if (result.priceRangeHigh)   brand.priceRangeHigh   = result.priceRangeHigh;
-        if (result.notes)            brand.notes            = result.notes;
-        if (result.instagramHandle)  brand.instagramHandle  = result.instagramHandle;
-
+        results = await enrichFromKnowledge(client, batch);
+      } catch (err) {
+        console.error(`\n  ERROR batch ${batchNum}: ${err.message}`);
+        continue;
+      }
+      for (const result of results) {
+        const entry = withoutUrl.find(b => b.brandName.toLowerCase() === result.brandName.toLowerCase());
+        if (!entry) continue;
+        if (result.country)  entry.country  = result.country;
+        if (result.website)  entry.website  = result.website;
+        if (result.notes)    entry.notes    = result.notes;
+        else { entry.notes = 'Unknown brand — manual review needed'; unknownCount++; }
         enriched++;
-
-        if (brand.country) {
-          const region = COUNTRY_TO_REGION[brand.country] || 'other';
+        if (entry.country) {
+          const region = COUNTRY_TO_REGION[entry.country] || 'other';
           if (region !== 'other') {
-            regionData[region].push(brand);
+            regionData[region].push(entry);
             moved++;
-            process.stdout.write(`\r  [${idx}/${toProcess.length}] MOVED [${region}]: ${brand.brandName.slice(0,25).padEnd(27)}`);
-            return;
+            console.log(`\n  MOVED [${region}]: ${entry.brandName} (${entry.country})`);
           }
         }
-        process.stdout.write(`\r  [${idx}/${toProcess.length}] OK: ${brand.brandName.slice(0,33).padEnd(35)}`);
-      } catch (err) {
-        brand.notes = brand.notes || `Enrichment error: ${err.message}`;
-        failed++;
-        process.stdout.write(`\r  [${idx}/${toProcess.length}] ERR: ${brand.brandName.slice(0,31).padEnd(33)}`);
       }
-    }));
+    }
+    process.stdout.write('\n');
   }
 
-  // Rebuild other.json — remove brands that were moved to regional files
+  // Rebuild other.json — remove moved brands
   regionData['other'] = regionData['other'].filter(b => {
     const key = b.brandName.toLowerCase();
     if (!processedNames.has(key)) return true;
@@ -229,12 +248,11 @@ async function run() {
     save(filename, regionData[region]);
   }
 
-  process.stdout.write('\n');
   console.log('\n--- Pass 2 Results ---');
-  console.log(`  Website fetched & enriched: ${enriched}`);
-  console.log(`  Moved to regional file:     ${moved}`);
-  console.log(`  Failed/unreachable:         ${failed}`);
-  console.log(`  No website (flagged):       ${noWebsite.length}`);
+  console.log(`  Enriched:           ${enriched}`);
+  console.log(`  Moved to region:    ${moved}`);
+  console.log(`  Failed (Mode A):    ${failed}`);
+  console.log(`  Unknown (Mode B):   ${unknownCount}`);
   for (const [region, filename] of Object.entries(REGION_FILES)) {
     console.log(`  ${region}: ${regionData[region].length} brands`);
   }
