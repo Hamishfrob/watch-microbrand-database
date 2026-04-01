@@ -46,6 +46,7 @@ function extractBrandLinks(html) {
 
 function decodeEntities(str) {
   return str
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code, 10)))
     .replace(/&amp;/g,  '&')
     .replace(/&lt;/g,   '<')
     .replace(/&gt;/g,   '>')
