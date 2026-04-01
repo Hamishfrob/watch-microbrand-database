@@ -87,7 +87,7 @@ async function processBatch(client, brands) {
   const names = brands.map(b => b.brandName);
   const message = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 4096,
+    max_tokens: 8192,
     messages: [{
       role: 'user',
       content: `Classify these watch brands:\n${JSON.stringify(names)}`
@@ -163,9 +163,13 @@ async function run() {
   }
 
   // Remove excluded and moved entries from other.json
+  // Only remove entries that were actually processed in this run (in processedNames set)
+  const processedNames = new Set(toProcess.map(b => b.brandName.toLowerCase()));
   regionData['other'] = regionData['other'].filter(b => {
-    if (excludedNames.has(b.brandName.toLowerCase())) return false;
-    if (b.country && COUNTRY_TO_REGION[b.country] && COUNTRY_TO_REGION[b.country] !== 'other') return false;
+    const key = b.brandName.toLowerCase();
+    if (!processedNames.has(key)) return true; // not processed this run, leave it
+    if (excludedNames.has(key)) return false;   // excluded — remove
+    if (b.country && COUNTRY_TO_REGION[b.country] && COUNTRY_TO_REGION[b.country] !== 'other') return false; // moved — remove
     return true;
   });
 
