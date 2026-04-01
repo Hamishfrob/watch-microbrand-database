@@ -41,15 +41,31 @@ function load(filename) {
   return JSON.parse(fs.readFileSync(fp, 'utf8'));
 }
 
+let saving = false;
+let savePending = null;
+
 function save(filename, data) {
-  data.sort((a, b) =>
+  // If already saving, queue latest state for after current save
+  if (saving) {
+    savePending = { filename, data: [...data] };
+    return;
+  }
+  saving = true;
+  const sorted = [...data].sort((a, b) =>
     (a.brandName || '').localeCompare(b.brandName || '', 'en', { sensitivity: 'base' })
   );
-  fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(data, null, 2), 'utf8');
+  fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(sorted, null, 2), 'utf8');
+  saving = false;
+  if (savePending) {
+    const { filename: pf, data: pd } = savePending;
+    savePending = null;
+    save(pf, pd);
+  }
 }
 
 // Returns raw HTML string or null on error/timeout
-function fetchPage(url) {
+function fetchPage(url, depth = 0) {
+  if (depth > 5) return Promise.resolve(null);
   return new Promise(resolve => {
     const mod = url.startsWith('https') ? https : http;
     try {
@@ -57,13 +73,14 @@ function fetchPage(url) {
         timeout: TIMEOUT_MS,
         headers: { 'User-Agent': 'WatchBrandBot/1.0 (+https://github.com/watchcollectorsclub)' }
       }, res => {
-        // Follow one redirect
+        // Follow redirects up to depth limit
         if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
-          return fetchPage(res.headers.location).then(resolve);
+          res.resume(); // drain the response
+          return fetchPage(res.headers.location, depth + 1).then(resolve);
         }
         const chunks = [];
         res.on('data', c => chunks.push(c));
-        res.on('end', () => resolve(chunks.join('')));
+        res.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
         res.on('error', () => resolve(null));
       });
       req.on('timeout', () => { req.destroy(); resolve(null); });
@@ -78,7 +95,7 @@ function extractInstagram(html) {
   if (!match) return null;
   const handle = match[1];
   // Filter out generic Instagram paths
-  const skip = ['p', 'reel', 'stories', 'explore', 'accounts', 'shoppingbag', 'share', 'tv'];
+  const skip = ['p', 'reel', 'reels', 'stories', 'explore', 'accounts', 'shoppingbag', 'share', 'tv'];
   if (skip.includes(handle.toLowerCase())) return null;
   return handle;
 }
@@ -133,7 +150,11 @@ async function enrichWithClaude(client, brand, pageText) {
 
 // Returns true if brand needs any enrichment
 function needsWork(brand) {
-  return !brand.instagramHandle || !brand.priceRangeLow || !brand.foundedYear || !brand.latestModel || !brand.notes;
+  return brand.instagramHandle == null
+    || brand.priceRangeLow == null
+    || brand.foundedYear == null
+    || brand.latestModel == null
+    || brand.notes == null;
 }
 
 async function processBrand(client, brand, filename, data) {
@@ -148,12 +169,12 @@ async function processBrand(client, brand, filename, data) {
   if (!html) return 'fetch-error';
 
   // Instagram handle — regex only, no Claude needed
-  if (!brand.instagramHandle) {
+  if (brand.instagramHandle == null) {
     brand.instagramHandle = extractInstagram(html) || null;
   }
 
   // Claude enrichment for remaining fields
-  const needsClaude = !brand.priceRangeLow || !brand.foundedYear || !brand.latestModel || !brand.notes;
+  const needsClaude = brand.priceRangeLow == null || brand.foundedYear == null || brand.latestModel == null || brand.notes == null;
   if (needsClaude) {
     const pageText = stripHtml(html);
     let extracted = {};
@@ -163,11 +184,11 @@ async function processBrand(client, brand, filename, data) {
       console.error(`\n  Claude error for ${brand.brandName}: ${err.message}`);
     }
 
-    if (extracted.priceRangeLow  && !brand.priceRangeLow)  brand.priceRangeLow  = extracted.priceRangeLow;
-    if (extracted.priceRangeHigh && !brand.priceRangeHigh) brand.priceRangeHigh = extracted.priceRangeHigh;
-    if (extracted.foundedYear    && !brand.foundedYear)    brand.foundedYear    = extracted.foundedYear;
-    if (extracted.latestModel    && !brand.latestModel)    brand.latestModel    = extracted.latestModel;
-    if (extracted.notes          && !brand.notes)          brand.notes          = extracted.notes;
+    if (extracted.priceRangeLow  != null && brand.priceRangeLow  == null) brand.priceRangeLow  = extracted.priceRangeLow;
+    if (extracted.priceRangeHigh != null && brand.priceRangeHigh == null) brand.priceRangeHigh = extracted.priceRangeHigh;
+    if (extracted.foundedYear    != null && brand.foundedYear    == null) brand.foundedYear    = extracted.foundedYear;
+    if (extracted.latestModel    != null && brand.latestModel    == null) brand.latestModel    = extracted.latestModel;
+    if (extracted.notes          != null && brand.notes          == null) brand.notes          = extracted.notes;
   }
 
   save(filename, data);
@@ -195,14 +216,14 @@ async function run() {
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-  const regions = REGION_ARG
-    ? { [REGION_ARG]: REGION_FILES[REGION_ARG] }
-    : REGION_FILES;
-
   if (REGION_ARG && !REGION_FILES[REGION_ARG]) {
     console.error(`Unknown region: "${REGION_ARG}". Valid options: ${Object.keys(REGION_FILES).join(', ')}`);
     process.exit(1);
   }
+
+  const regions = REGION_ARG
+    ? { [REGION_ARG]: REGION_FILES[REGION_ARG] }
+    : REGION_FILES;
 
   let totalDone = 0, totalSkipped = 0, totalErrors = 0;
 
