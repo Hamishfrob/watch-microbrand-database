@@ -1,5 +1,35 @@
 [
   {
+    "brandName": "Adina",
+    "country": "Australia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://adinatime.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Australian watch brand producing contemporary analog watches. Known for minimalist designs and accessible pricing."
+  },
+  {
+    "brandName": "Agelocer",
+    "country": "China",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://agelocer.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Chinese watch brand offering affordable mechanical and automatic watches. Known for sport and dive watch models."
+  },
+  {
     "brandName": "Atelier Wen",
     "country": "Singapore",
     "townCity": "Singapore, Singapore",
@@ -15,6 +45,21 @@
     "notes": "Singapore-based independent celebrating Chinese cultural heritage through watch design. Swiss-assembled. Strong following in Asia and internationally. Visitability unconfirmed."
   },
   {
+    "brandName": "Awake Watches",
+    "country": "Australia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://awakewatches.com.au",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Awake Watches is an Australian microbrand producing minimalist dive watches and field watches with a focus on functionality."
+  },
+  {
     "brandName": "Azimuth",
     "country": "Hong Kong",
     "townCity": null,
@@ -28,6 +73,36 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Hong Kong independent brand known for distinctive design and creative complications in affordable automatic watches. Focuses on unique dial configurations."
+  },
+  {
+    "brandName": "Bangalore Watch Company",
+    "country": "India",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://bangalorewatch.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Bangalore Watch Company is an Indian microbrand producing field watches and dress watches with a focus on craftsmanship."
+  },
+  {
+    "brandName": "Bobo Bird",
+    "country": "China",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.bobobirdwatch.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "A fashion watch brand known for wooden and bamboo watch designs aimed at casual and fashion-conscious consumers."
   },
   {
     "brandName": "Burei",
@@ -60,6 +135,51 @@
     "notes": "Chinese independent known for award-winning sculptural and mechanical watch design. Multiple Red Dot and iF Design Award winner. Based in Shenzhen. Visitability unconfirmed."
   },
   {
+    "brandName": "CKL Taiwan",
+    "country": "Taiwan",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": null,
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Corgeut",
+    "country": "China",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": null,
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Chinese watch brand known for affordable mechanical watches and watch parts. Produces dive watches and other casual timepieces."
+  },
+  {
+    "brandName": "Crrju",
+    "country": "China",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": null,
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Chinese watch brand producing affordable casual and dress watches. Primarily sold through online retailers."
+  },
+  {
     "brandName": "Earthen Co",
     "country": "China",
     "townCity": "Hong Kong, China",
@@ -73,6 +193,21 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Hong Kong brand founded in 2025 by watch enthusiasts including co-founder Johnathan Chan. Specialises in accessible ceramic-cased watches."
+  },
+  {
+    "brandName": "Gavox",
+    "country": "Singapore",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.gavox.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "A Singaporean microbrand producing mechanical watches with bold designs and affordable pricing. Known for producing limited edition models with strong community engagement."
   },
   {
     "brandName": "Guanqin",
@@ -118,6 +253,36 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Historic Indian watchmaker founded in 1953 as Hindustan Machine Tools. Known for affordable mechanical watches with in-house movements, particularly dive and field watches."
+  },
+  {
+    "brandName": "Infantry",
+    "country": "China",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.infantrywatch.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Chinese microbrand known for affordable military-style watches with quartz and automatic movements."
+  },
+  {
+    "brandName": "Jaipur Watch Co.",
+    "country": "India",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": null,
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Indian watch brand based in Jaipur."
   },
   {
     "brandName": "Kentex",
@@ -255,6 +420,21 @@
     "notes": "Japanese microbrand focused on vintage-inspired divers and military-style watches with retro aesthetics."
   },
   {
+    "brandName": "Panzera",
+    "country": "South Korea",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.panzera.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "A South Korean microbrand known for affordable automatic watches and homage designs with good build quality."
+  },
+  {
     "brandName": "Phoibos",
     "country": "Hong Kong",
     "townCity": null,
@@ -268,6 +448,21 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Hong Kong-based microbrand specializing in affordable dive watches and sports models with quartz and automatic movements."
+  },
+  {
+    "brandName": "Pitzmann Seoul",
+    "country": "South Korea",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": null,
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "A South Korean watch brand with limited available information."
   },
   {
     "brandName": "Sugess Watch",
@@ -315,6 +510,21 @@
     "notes": "South Korean independent brand known for affordable homage watches and original designs inspired by vintage military and dive watches. Uses Miyota and Seagull movements."
   },
   {
+    "brandName": "Titus (Solvil)",
+    "country": "Hong Kong",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": null,
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "A Hong Kong-based watch brand, Solvil et Titus, known for dress watches and mechanical timepieces."
+  },
+  {
     "brandName": "Wancher",
     "country": "Japan",
     "townCity": null,
@@ -330,6 +540,21 @@
     "notes": "Japanese independent brand known for affordable dress and field watches with vintage aesthetic. Uses Seiko and Miyota movements."
   },
   {
+    "brandName": "WatchDives",
+    "country": "Vietnam",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://watchdives.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "WatchDives is a Vietnamese microbrand known for producing affordable automatic watches with good quality construction."
+  },
+  {
     "brandName": "Xushu Ma",
     "country": "China",
     "townCity": "Beijing, China",
@@ -343,6 +568,21 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Self-taught Chinese watchmaker who became an independent watchmaker in his 50s after an engineering career. AHCI member since 2015 (only the second Chinese member at the time). Known for unusual complications including a thermometer-style time display."
+  },
+  {
+    "brandName": "Zeroo Time",
+    "country": "Japan",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.zeroo.jp",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Zeroo is known for creating innovative watches without traditional hour markers or hands, using LED displays in a unique design approach. The brand emphasizes modern, minimalist aesthetics."
   },
   {
     "brandName": "Ztage",
