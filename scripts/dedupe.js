@@ -53,7 +53,8 @@ for (const [region, entries] of Object.entries(files)) {
         console.log(`  DUPE: "${entry.brandName}" — keeping ${region} entry (richer), removing ${existing.region}`);
         seen.set(key, { region, entry, richness: r });
       } else {
-        console.log(`  DUPE: "${entry.brandName}" — keeping ${existing.region} entry (richer), removing ${region}`);
+        const reason = r === existing.richness ? 'equal richness, keeping first-seen' : 'richer';
+        console.log(`  DUPE: "${entry.brandName}" — keeping ${existing.region} entry (${reason}), removing ${region}`);
       }
       removed++;
     } else {
@@ -63,7 +64,7 @@ for (const [region, entries] of Object.entries(files)) {
 }
 
 // Rebuild files from deduplicated map
-const rebuilt = { europe: [], americas: [], 'asia-pacific': [], other: [] };
+const rebuilt = Object.fromEntries(Object.keys(REGION_FILES).map(r => [r, []]));
 for (const { region, entry } of seen.values()) {
   rebuilt[region].push(entry);
 }
