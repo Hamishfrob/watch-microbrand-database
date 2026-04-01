@@ -21,11 +21,18 @@ const REGION_ARG = process.argv.includes('--region')
   ? process.argv[process.argv.indexOf('--region') + 1]
   : null;
 
+// Note: microbrands-other.json is intentionally excluded — brands there
+// haven't been assigned a country yet and are handled by enrich-pass2.js
 const REGION_FILES = {
   'europe':       'microbrands-europe.json',
   'americas':     'microbrands-americas.json',
   'asia-pacific': 'microbrands-asia-pacific.json',
 };
+
+if (REGION_ARG && !REGION_FILES[REGION_ARG]) {
+  console.error(`Unknown region: "${REGION_ARG}". Valid options: ${Object.keys(REGION_FILES).join(', ')}`);
+  process.exit(1);
+}
 
 function load(filename) {
   const fp = path.join(DATA_DIR, filename);
@@ -59,16 +66,26 @@ async function processBatch(client, brands) {
   const names = brands.map(b => b.brandName);
   const message = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 4096,
+    max_tokens: 8192,
     messages: [{ role: 'user', content: `Find websites for these watch brands:\n${JSON.stringify(names)}` }],
     system: SYSTEM_PROMPT,
   });
   const text = message.content[0].text.trim();
   const json = text.replace(/^```json?\s*/i, '').replace(/\s*```$/i, '').trim();
-  return JSON.parse(json);
+  try {
+    return JSON.parse(json);
+  } catch (err) {
+    console.error(`\n  JSON parse error: ${err.message}\n  Raw response: ${text.slice(0, 200)}`);
+    return [];
+  }
 }
 
 async function run() {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.error('Error: ANTHROPIC_API_KEY not set. Add it to your .env file.');
+    process.exit(1);
+  }
+
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const regions = REGION_ARG
@@ -105,9 +122,11 @@ async function run() {
         if (!result.website) continue;
         const entry = data.find(b => b.brandName.toLowerCase() === result.brandName.toLowerCase());
         if (!entry) continue;
-        entry.website = result.website;
-        batchFound++;
-        totalFound++;
+        if (result.website && typeof result.website === 'string' && /^https?:\/\/.+\..+/.test(result.website)) {
+          entry.website = result.website;
+          batchFound++;
+          totalFound++;
+        }
       }
       console.log(` found ${batchFound}/${batch.length}`);
       save(filename, data);
