@@ -1,5 +1,5 @@
 // scripts/enrich-pass1.js
-require('dotenv').config();
+require('dotenv').config({ override: true });
 // Pass 1: Send brand names in batches to Claude API (no web fetching).
 // Claude classifies each brand (keep/exclude), assigns country from training knowledge,
 // and writes a short notes field for brands it recognises.
