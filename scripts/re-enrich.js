@@ -53,6 +53,7 @@ const REGION_FILES = {
   'europe':       'microbrands-europe.json',
   'americas':     'microbrands-americas.json',
   'asia-pacific': 'microbrands-asia-pacific.json',
+  'other':        'microbrands-other.json',
 };
 
 // ─── File I/O ─────────────────────────────────────────────────────────────────
