@@ -1,10 +1,19 @@
 // scripts/re-enrich.js
 //
-// Enriches brand data using Claude with built-in web search and web fetch.
-// Claude searches for / verifies the official website, fetches homepage and
-// shop/collection pages, then extracts all fields and assesses brand status.
+// Enriches brand data using manual HTTP fetch + Claude Haiku extraction.
 //
-// No external search API needed — Anthropic handles all web access server-side.
+// ⚠️  DO NOT use Anthropic web_search / web_fetch tools here.
+//     Those tools fetch full pages server-side and pass them through the model
+//     at 20,000–50,000 tokens per page — roughly 150× more expensive than
+//     fetching pages ourselves and stripping them to plain text first.
+//     Lesson learned: web_search_20260209 cost ~$0.70/brand vs ~$0.004/brand here.
+//
+// Approach:
+//   1. Fetch homepage ourselves (free HTTP) — strip HTML → plain text
+//   2. Follow one shop/collection link for prices (free HTTP)
+//   3. Extract Instagram handle from raw HTML with a regex (free, no API call)
+//   4. Pass stripped text (~4,000 tokens) to Claude Haiku for extraction
+//   5. For brands with no website: ask Haiku from knowledge only
 //
 // Flags:
 //   --region europe|americas|asia-pacific  (default: all three)
@@ -13,29 +22,22 @@
 //
 // Run:              node scripts/re-enrich.js
 // One region:       node scripts/re-enrich.js --region europe
-// Test (10 brands): node scripts/re-enrich.js --region europe --limit 10
+// Dry test:         node scripts/re-enrich.js --region europe --limit 5
 // Monthly refresh:  node scripts/re-enrich.js --force
 
+'use strict';
 require('dotenv').config({ override: true });
 const Anthropic = require('@anthropic-ai/sdk');
-const fs   = require('fs');
-const path = require('path');
+const fs        = require('fs');
+const path      = require('path');
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const DATA_DIR    = path.join(__dirname, '..', 'data');
-const CONCURRENCY = 3;
-
-// Web search + fetch require Sonnet 4.6 or Opus 4.6 for the dynamic-filtering
-// versions. Switch to 'claude-haiku-4-5' only if you've confirmed web search
-// is available on Haiku in your API tier.
-const MODEL = 'claude-sonnet-4-6';
-
-// Anthropic-hosted tools — no API key or backend required
-const TOOLS = [
-  { type: 'web_search_20260209', name: 'web_search' },
-  { type: 'web_fetch_20260209',  name: 'web_fetch'  },
-];
+const DATA_DIR        = path.join(__dirname, '..', 'data');
+const MODEL           = 'claude-haiku-4-5';   // cheap extraction model — no web tools
+const CONCURRENCY     = 5;                    // parallel brands
+const FETCH_TIMEOUT   = 10_000;               // ms per HTTP request
+const MAX_PAGE_CHARS  = 6_000;                // strip pages to this length before sending
 
 const LIMIT = process.argv.includes('--limit')
   ? parseInt(process.argv[process.argv.indexOf('--limit') + 1], 10)
@@ -61,22 +63,11 @@ function load(filename) {
   return JSON.parse(fs.readFileSync(fp, 'utf8'));
 }
 
-let _saving = false;
-let _savePending = null;
-
 function save(filename, data) {
-  if (_saving) { _savePending = { filename, data: [...data] }; return; }
-  _saving = true;
   const sorted = [...data].sort((a, b) =>
     (a.brandName || '').localeCompare(b.brandName || '', 'en', { sensitivity: 'base' })
   );
   fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(sorted, null, 2), 'utf8');
-  _saving = false;
-  if (_savePending) {
-    const { filename: pf, data: pd } = _savePending;
-    _savePending = null;
-    save(pf, pd);
-  }
 }
 
 // ─── Skip logic ───────────────────────────────────────────────────────────────
@@ -88,83 +79,117 @@ function needsWork(brand) {
     || brand.priceRangeLow    == null
     || brand.foundedYear      == null
     || brand.latestModel      == null
-    || !brand.status
-    || brand.lastActivityDate == null
     || !brand.notes;
 }
 
-// ─── Claude enrichment ────────────────────────────────────────────────────────
+// ─── HTTP fetch (manual — no Anthropic tools) ─────────────────────────────────
+
+async function fetchPage(url) {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT);
+    const res = await fetch(url, {
+      signal:   controller.signal,
+      redirect: 'follow',
+      headers:  { 'User-Agent': 'Mozilla/5.0 (compatible; WatchResearchBot/1.0)' },
+    });
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    const html = await res.text();
+    return { html, finalUrl: res.url };
+  } catch {
+    return null;
+  }
+}
+
+// ─── HTML processing ──────────────────────────────────────────────────────────
+
+function stripHtml(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi,   '')
+    .replace(/<svg[\s\S]*?<\/svg>/gi,        '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g,  ' ')
+    .replace(/&amp;/g,   '&')
+    .replace(/&lt;/g,    '<')
+    .replace(/&gt;/g,    '>')
+    .replace(/&quot;/g,  '"')
+    .replace(/\s+/g,     ' ')
+    .trim()
+    .slice(0, MAX_PAGE_CHARS);
+}
+
+// Extract Instagram handle directly from raw HTML — no API call needed
+function extractInstagram(html) {
+  const match = html.match(/instagram\.com\/([a-zA-Z0-9_.]{2,30})/);
+  if (!match) return null;
+  const handle = match[1];
+  const generic = ['p', 'reel', 'explore', 'accounts', 'direct', 'stories', 'tv', 'shoppingredirect'];
+  return generic.includes(handle) ? null : handle;
+}
+
+// Find a shop or collection page link within the same domain
+function findShopLink(html, baseUrl) {
+  const base = new URL(baseUrl);
+  const hrefs = [...html.matchAll(/href=["']([^"'#?]{4,})["']/gi)].map(m => m[1]);
+  for (const href of hrefs) {
+    try {
+      const url = new URL(href, baseUrl);
+      if (url.hostname !== base.hostname) continue;
+      const p = url.pathname.toLowerCase();
+      if (/\/(shop|collection|collections|watches|buy|store|products|catalogue|catalog|boutique|order)\b/.test(p)) {
+        return url.href;
+      }
+    } catch { /* invalid href */ }
+  }
+  return null;
+}
+
+// ─── Claude extraction ────────────────────────────────────────────────────────
 
 const EXTRACT_SCHEMA = `{
   "website": "https://...",          // correct official URL, or null
   "instagramHandle": "...",          // username without @, or null
-  "priceRangeLow": 350,              // lowest current USD price (integer), or null
-  "priceRangeHigh": 650,             // highest current USD price (integer), or null
-  "foundedYear": 2017,               // year brand was founded (integer), or null
-  "latestModel": "...",              // most recent or currently featured model name, or null
-  "status": "Active",                // "Active" = selling now, "Dormant" = no activity 12+ months, "Defunct" = closed
-  "lastActivityDate": "2024-10-01",  // ISO YYYY-MM-DD date of most recent confirmed activity, or null
-  "notes": "..."                     // 1-3 factual sentences: founding story, style, movements, location
+  "priceRangeLow": 350,              // lowest current USD price as integer, or null
+  "priceRangeHigh": 650,             // highest current USD price as integer, or null
+  "foundedYear": 2017,               // year brand was founded as integer, or null
+  "latestModel": "...",              // most recent or featured model name, or null
+  "status": "Active",                // "Active" | "Dormant" | "Defunct"
+  "lastActivityDate": "2024-10-01",  // ISO YYYY-MM-DD of last confirmed activity, or null
+  "notes": "..."                     // 1-3 factual sentences: founding, style, movements, location
 }`;
 
-async function enrichBrand(client, brand) {
-  const websiteContext = brand.website
-    ? `Existing website on file: ${brand.website} — verify this is the correct official site for the brand.`
-    : `No website on file — find the official website.`;
+async function enrichBrand(client, brand, homeText, shopText) {
+  const context = homeText
+    ? `Homepage content:\n${homeText}${shopText ? `\n\nShop/collection page:\n${shopText}` : ''}`
+    : `No website content available. Use your training knowledge only.`;
 
-  const userMessage = `You are a watch industry researcher. Research the watch brand "${brand.brandName}" (country: ${brand.country || 'unknown'}).
+  const userMessage = `Extract data for the watch brand "${brand.brandName}" (${brand.country || 'unknown country'}).
 
-${websiteContext}
+${context}
 
-Instructions:
-1. Search for "${brand.brandName} watches" to find or verify the official website
-2. Fetch the homepage of the official site
-3. Find and fetch a shop, collection, or buy page to get price information
-4. Extract all fields and return ONLY a single valid JSON object — no markdown, no explanation
-
-JSON schema to return:
+Return ONLY valid JSON with no markdown or explanation:
 ${EXTRACT_SCHEMA}
 
 Rules:
-- Only return values you are confident about — do not guess or fabricate
-- Prices must be in USD — convert from other currencies using approximate rates
-- Notes style: "French microbrand founded in 2017. Known for vintage-inspired dive watches. Swiss-assembled using Sellita movements."
-- If the brand appears to be defunct (site down, no products, closed notice), set status to "Defunct"`;
+- Only return values you are confident about — never guess or fabricate
+- Prices must be in USD integers — convert from other currencies if needed
+- Notes format: "German microbrand founded in 2014. Known for field watches with in-house movements. Based in Hamburg."
+- Status: Active = selling now; Dormant = no activity 12+ months; Defunct = site down or closed notice`;
 
-  const messages = [{ role: 'user', content: userMessage }];
-  let response;
-  let continuations = 0;
-  const MAX_CONTINUATIONS = 5;
+  const response = await client.messages.create({
+    model:      MODEL,
+    max_tokens: 512,
+    messages:   [{ role: 'user', content: userMessage }],
+  });
 
-  // Server-side tool loops can hit an iteration limit and return pause_turn.
-  // When that happens, append the assistant turn and re-send — the API resumes.
-  do {
-    response = await client.messages.create({
-      model:      MODEL,
-      max_tokens: 1024,
-      tools:      TOOLS,
-      messages,
-    });
-
-    if (response.stop_reason === 'pause_turn') {
-      messages.push({ role: 'assistant', content: response.content });
-      continuations++;
-    }
-  } while (response.stop_reason === 'pause_turn' && continuations < MAX_CONTINUATIONS);
-
-  // The final response should contain a text block with the JSON
   for (const block of response.content) {
-    if (block.type === 'text') {
-      const text = block.text.trim().replace(/^```json?\s*/i, '').replace(/\s*```$/i, '');
-      try {
-        return JSON.parse(text);
-      } catch {
-        // Claude occasionally wraps JSON in prose — try to extract it
-        const jsonMatch = text.match(/\{[\s\S]*\}/);
-        if (jsonMatch) {
-          try { return JSON.parse(jsonMatch[0]); } catch { /* fall through */ }
-        }
-      }
+    if (block.type !== 'text') continue;
+    const text = block.text.trim().replace(/^```json?\s*/i, '').replace(/\s*```$/i, '');
+    try { return JSON.parse(text); } catch {
+      const m = text.match(/\{[\s\S]*\}/);
+      if (m) try { return JSON.parse(m[0]); } catch { /* fall through */ }
     }
   }
   return null;
@@ -175,16 +200,36 @@ Rules:
 async function processBrand(client, brand, filename, data) {
   if (!needsWork(brand)) return 'skip';
 
+  let homeText = null, shopText = null;
+
+  if (brand.website) {
+    const home = await fetchPage(brand.website);
+    if (home) {
+      // Extract Instagram from raw HTML before stripping (regex on full source)
+      const igFromHtml = extractInstagram(home.html);
+      if (igFromHtml && brand.instagramHandle == null) {
+        brand.instagramHandle = igFromHtml;
+      }
+
+      homeText = stripHtml(home.html);
+
+      const shopUrl = findShopLink(home.html, home.finalUrl);
+      if (shopUrl) {
+        const shop = await fetchPage(shopUrl);
+        if (shop) shopText = stripHtml(shop.html);
+      }
+    }
+  }
+
   let extracted;
   try {
-    extracted = await enrichBrand(client, brand);
-  } catch (err) {
+    extracted = await enrichBrand(client, brand, homeText, shopText);
+  } catch {
     return 'error';
   }
 
   if (!extracted) return 'no-data';
 
-  // Apply extracted values — only overwrite nulls unless --force
   const fields = [
     'website', 'instagramHandle',
     'priceRangeLow', 'priceRangeHigh',
@@ -204,16 +249,11 @@ async function processBrand(client, brand, filename, data) {
 // ─── Concurrency pool ─────────────────────────────────────────────────────────
 
 async function runPool(tasks, concurrency) {
-  const results = [];
   let idx = 0;
   async function worker() {
-    while (idx < tasks.length) {
-      const i = idx++;
-      results[i] = await tasks[i]();
-    }
+    while (idx < tasks.length) await tasks[idx++]();
   }
   await Promise.all(Array.from({ length: concurrency }, worker));
-  return results;
 }
 
 // ─── Entry point ──────────────────────────────────────────────────────────────
@@ -231,21 +271,20 @@ async function run() {
     process.exit(1);
   }
 
-  const regions = REGION_ARG
-    ? { [REGION_ARG]: REGION_FILES[REGION_ARG] }
-    : REGION_FILES;
+  const regions = REGION_ARG ? { [REGION_ARG]: REGION_FILES[REGION_ARG] } : REGION_FILES;
 
   let totalDone = 0, totalSkipped = 0, totalErrors = 0, totalNoData = 0;
 
   for (const [region, filename] of Object.entries(regions)) {
-    const data = load(filename);
+    const data  = load(filename);
     const toProcess = data.filter(needsWork).slice(0, LIMIT);
+
     if (toProcess.length === 0) {
-      console.log(`\n${region}: nothing to re-enrich (use --force to refresh existing data)`);
+      console.log(`\n${region}: nothing to re-enrich (use --force to refresh)`);
       continue;
     }
+
     console.log(`\n${region}: re-enriching ${toProcess.length} brands (concurrency ${CONCURRENCY}, model ${MODEL})...`);
-    if (FORCE) console.log('  --force: overwriting existing data');
 
     let done = 0;
     const tasks = toProcess.map(brand => async () => {
