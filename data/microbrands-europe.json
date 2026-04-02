@@ -30,6 +30,21 @@
     "notes": "Hungarian independent watchmaker and AHCI member from a three-generation watchmaking family. Hand-makes every component of his wristwatches — cases, bridges, dials, hands, and buckles — in his Budapest atelier."
   },
   {
+    "brandName": "Abinger",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "NIMROD",
+    "lastActivityDate": "2025-01-01",
+    "website": "https://www.abingerwatches.com",
+    "instagramHandle": "abingerwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Abordage",
     "country": "France",
     "townCity": "Paris",
@@ -58,6 +73,21 @@
     "instagramHandle": "av86official",
     "source": "MBWDB",
     "notes": "British microbrand specializing in vintage-inspired watches with a focus on affordable, quality timepieces. Known for their retro design aesthetic and attention to detail."
+  },
+  {
+    "brandName": "ADMES GENEVE",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": 1894,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Tribute to Compax",
+    "lastActivityDate": "2025-11-06",
+    "website": "https://www.universalgeneve.com/",
+    "instagramHandle": "universalgeneve",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Adriatica",
@@ -165,6 +195,21 @@
     "notes": "Alain Silberstein is a Paris-based French independent watchmaker internationally recognised for Bauhaus-influenced designs using bold primary colours and geometric forms, with collaborations spanning Blancpain, MB&F, and other major Swiss manufactures. His Paris atelier is the creative origin of all his work, though movement production is handled in Switzerland. A visit would engage with his design archives and distinctive artistic philosophy. Visitability would need to be arranged directly given his individual-atelier model."
   },
   {
+    "brandName": "Alexander James Watches",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "A3 Omen II",
+    "lastActivityDate": null,
+    "website": "https://alexanderjameswatches.com/",
+    "instagramHandle": "alexanderjameswatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Alexander Shorokhoff",
     "country": "Germany",
     "townCity": null,
@@ -178,6 +223,21 @@
     "instagramHandle": "alexander_shorokhoff",
     "source": "MBWDB",
     "notes": "German independent watchmaker specializing in pilot and mechanical watches with in-house designs, operating since the 1990s."
+  },
+  {
+    "brandName": "Alexandre Meerson",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.alexandre-meerson.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Amaros",
@@ -360,6 +420,21 @@
     "notes": "Independent Swiss watchmaker based in Tramelan. Known for mechanical watches blending traditional craftsmanship with contemporary design; family-owned since 1875."
   },
   {
+    "brandName": "ArtyA",
+    "country": "Ukraine",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 108900,
+    "priceRangeHigh": 528000,
+    "status": "Active",
+    "latestModel": "Purity Moissanite Curvy Tourbillon",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://www.artya.com",
+    "instagramHandle": "artyawatch",
+    "source": "MBWDB",
+    "notes": "Ukrainian independent watchmaker known for artistic, avant-garde designs and custom builds. Produces limited-edition timepieces with distinctive aesthetic."
+  },
+  {
     "brandName": "Askania",
     "country": "Germany",
     "townCity": "Berlin",
@@ -390,6 +465,21 @@
     "notes": "Independent watchmaking atelier in Besançon — France's historic horological capital. Produces hand-finished, bespoke watches drawing on traditional Franc-Comtois techniques. Visitability potentially by arrangement — confirm before visiting."
   },
   {
+    "brandName": "Atelier Perpetual",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.atelierperpetual.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Atlantic",
     "country": "Germany",
     "townCity": null,
@@ -403,6 +493,21 @@
     "instagramHandle": "atlantic_watch_ltd",
     "source": "MBWDB",
     "notes": "German watch brand with heritage dating back to 1950s. Known for classic automatic watches and sports models with reliable movements at mid-range prices."
+  },
+  {
+    "brandName": "Audric",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 999,
+    "priceRangeHigh": 999,
+    "status": "Active",
+    "latestModel": "SEABORNE",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://www.audricwatches.com",
+    "instagramHandle": "audricwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Augmé",
@@ -463,6 +568,21 @@
     "instagramHandle": "auricoste_officiel",
     "source": "existing-db",
     "notes": "A historic Besançon brand with a distinguished history supplying flyback chronographs to the French military, including the Armée de l'Air — one of few brands with continuous French military supply heritage alongside Dodane. Revived with a focus on French aviation timing heritage. Current production location and visitor access should be confirmed directly; an excellent complement to a Besançon horological itinerary."
+  },
+  {
+    "brandName": "Autran & Viala",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": 1924,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Opera 41",
+    "lastActivityDate": null,
+    "website": "https://www.autran-viala.com/en/",
+    "instagramHandle": "autranviala",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "AVI-8",
@@ -538,6 +658,21 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Ballast is a German watch brand known for pilot watches and field watches with strong Bauhaus design influences."
+  },
+  {
+    "brandName": "Balmer",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.balmer.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Balmont",
@@ -705,6 +840,36 @@
     "notes": "Award-winning British designer creating illuminated luxury art timepieces (Tempus series) featuring LED-illuminated mechanical movements. Australian-born, UK-based studio in London."
   },
   {
+    "brandName": "Benzinger",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.benzinger.de",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Bespoke Watch Projects",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 745,
+    "priceRangeHigh": 1850,
+    "status": "Active",
+    "latestModel": "Dragonscale Edition",
+    "lastActivityDate": "2024-12-19",
+    "website": "https://www.bespokewatchprojects.com",
+    "instagramHandle": "bespokewatchprojects",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Bianchet",
     "country": "Switzerland",
     "townCity": "Neuchatel",
@@ -748,6 +913,36 @@
     "instagramHandle": "blackout.watches",
     "source": "existing-db",
     "notes": "Swiss independent based in Geneva. Known for stealthy all-black treated watches and stealth-spec military aesthetic. Swiss movements. Visitability unconfirmed."
+  },
+  {
+    "brandName": "Blackout Concept",
+    "country": "Sweden",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.blackoutconcept.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Bohen",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.bohen.fr",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Bomberg",
@@ -900,6 +1095,36 @@
     "notes": "Atelier near Bordeaux (Gironde). Motorsport and aviation-inspired watches with movements and cases made in-house in France including titanium and carbon fibre. High vertical integration for a French brand. EUR 5,000–30,000+."
   },
   {
+    "brandName": "Brunmontagne",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Representor",
+    "lastActivityDate": null,
+    "website": "https://www.brunmontagne.com",
+    "instagramHandle": "brunmontagne",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Bruvik",
+    "country": "Norway",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.bruvik.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Buci Paris",
     "country": "France",
     "townCity": "Paris",
@@ -930,6 +1155,21 @@
     "notes": "Brand of GFF Suisse SA based in Mendrisio, Ticino. Created to honour diving medicine pioneer Dr. Albert Buehlmann by integrating his decompression algorithms into purpose-built dive watches."
   },
   {
+    "brandName": "Buran",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.buran.ru",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Cabestan",
     "country": "Switzerland",
     "townCity": "Geneva",
@@ -943,6 +1183,36 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Geneva-based independent brand known for the Winch Tourbillon, which uses a horizontal cylindrical barrel driven by a chain-and-fusée mechanism visible through the dial — a world first at its 2007 launch. Production is limited to around 10 pieces per year. Atelier visit information for groups has not been publicly confirmed."
+  },
+  {
+    "brandName": "Cadola",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.cadola.ch",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Camden Watch Co",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "No.274 Swiss Made Automatic",
+    "lastActivityDate": null,
+    "website": "https://www.camdenwatchcompany.com",
+    "instagramHandle": "camdenwatchco",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Catorex",
@@ -1093,6 +1363,21 @@
     "instagramHandle": "circula_watches",
     "source": "MBWDB",
     "notes": "German microbrand founded in 2017. Known for minimalist Bauhaus-inspired dive and dress watches using ETA and Ronda movements. Sustainable production focused."
+  },
+  {
+    "brandName": "CJR",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.cjrwatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Code 41",
@@ -1275,6 +1560,36 @@
     "notes": "Swiss watch manufacturer founded 1993, produces sports and dive watches at accessible price points with Swiss movements."
   },
   {
+    "brandName": "Deaumar",
+    "country": "Spain",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.deaumar.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Dedegumo",
+    "country": "Austria",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.dedegumo.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Defakto",
     "country": "Germany",
     "townCity": "Berlin",
@@ -1363,6 +1678,21 @@
     "instagramHandle": "depancel",
     "source": "existing-db",
     "notes": "French independent with aviation and motorsport heritage. Produced in collaboration with Swiss manufacturers. Based in Paris. Visitability unconfirmed."
+  },
+  {
+    "brandName": "Descrier",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": "2022-08-16",
+    "website": "https://www.descrier.co.uk",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Detomaso",
@@ -1545,6 +1875,21 @@
     "notes": "One of Switzerland's oldest watchmaking families, re-established in Le Locle. Heritage complications and artistic dial work. Visitability unconfirmed."
   },
   {
+    "brandName": "Duckworth Prestex",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": 1920,
+    "priceRangeLow": 625,
+    "priceRangeHigh": 2450,
+    "status": "Active",
+    "latestModel": "Marcato Jumping Hour Limited Edition",
+    "lastActivityDate": "2026-01-01",
+    "website": "https://www.duckworthprestex.com",
+    "instagramHandle": "duckworthprestex",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Dufa",
     "country": "Germany",
     "townCity": null,
@@ -1620,6 +1965,21 @@
     "notes": "Italian independent based in Milan. Known for minimalist, Bauhaus-influenced watch design with strong Italian aesthetic. Swiss movements. Visitability unconfirmed."
   },
   {
+    "brandName": "Edmond",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Pole Guardian",
+    "lastActivityDate": "2014-12-31",
+    "website": "https://www.edmond-watches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Edox",
     "country": "Switzerland",
     "townCity": null,
@@ -1633,6 +1993,36 @@
     "instagramHandle": "edoxswisswatches",
     "source": "MBWDB",
     "notes": "Swiss microbrand founded in 1884, known for chronographs and sports watches. Uses ETA movements, positioned as independent brand under $2,000."
+  },
+  {
+    "brandName": "Einstoffen",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.einstoffen.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Electricianz",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.electricianz.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Elgé",
@@ -1695,6 +2085,21 @@
     "notes": "Vintage Swiss watch brand founded in 1913, known for Sherpa mountaineering watches and chronographs. Repositioned as modern microbrand."
   },
   {
+    "brandName": "Enoksen",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.enoksen.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Epos",
     "country": "Switzerland",
     "townCity": null,
@@ -1708,6 +2113,36 @@
     "instagramHandle": "eposwatches",
     "source": "MBWDB",
     "notes": "Swiss watchmaker founded in 1949, known for dress watches and chronographs with mechanical movements. Uses ETA and in-house calibers."
+  },
+  {
+    "brandName": "Erkahund Roland Kemmner",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 275,
+    "priceRangeHigh": 275,
+    "status": "Active",
+    "latestModel": "Kemmner Marine",
+    "lastActivityDate": "2010-10-01",
+    "website": "https://style.oversubstance.net/2010/10/kemmner-marine/",
+    "instagramHandle": "guysie",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Erroyl",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": 2014,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Heritage Black",
+    "lastActivityDate": null,
+    "website": "https://www.erroyl.com",
+    "instagramHandle": "erroylwatchcompany",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Eska",
@@ -1725,6 +2160,36 @@
     "notes": "Historic Swiss brand based in La Chaux-de-Fonds. Founded in the early 20th century. Known for the integrated bracelet construction — the Eska bracelet was a significant technical achievement. Revived and continuing the tradition. Visitability unconfirmed."
   },
   {
+    "brandName": "Eska Watches",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": 1918,
+    "priceRangeLow": 452,
+    "priceRangeHigh": 1936,
+    "status": "Active",
+    "latestModel": "Light Racing Range",
+    "lastActivityDate": "2026-01-21",
+    "website": "https://www.eskawatches.com/en",
+    "instagramHandle": "eska.watches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Eza",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://ezawatches.com/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Farer",
     "country": "United Kingdom",
     "townCity": "London",
@@ -1740,6 +2205,36 @@
     "notes": "London-based British independent. Known for bold colours, travel-time complications, and vintage GMT references. Swiss-assembled. Visitability unconfirmed."
   },
   {
+    "brandName": "Favre Lueba",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.favre-leuba.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Fawler",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.fawler.com",
+    "instagramHandle": "dm_holdings_fl",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Fears",
     "country": "United Kingdom",
     "townCity": "Bristol",
@@ -1753,6 +2248,51 @@
     "instagramHandle": "fearswatches",
     "source": "existing-db",
     "notes": "Revival of a historic Bristol watch company by the original founders' descendants. Collaborated with Garrick on a handmade movement watch. Confirm current visitability."
+  },
+  {
+    "brandName": "Fiona Kruger",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 14080,
+    "priceRangeHigh": 53340,
+    "status": "Active",
+    "latestModel": "Mystery Box: Forget Time",
+    "lastActivityDate": null,
+    "website": "https://www.fionakruger.com",
+    "instagramHandle": "fionakruger",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Fleddermann von Rieste",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "The Hanoverian",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://vonrieste.com/",
+    "instagramHandle": "vonriestewatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Florijn",
+    "country": "Netherlands",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 355,
+    "priceRangeHigh": 355,
+    "status": "Active",
+    "latestModel": "FLORIJN",
+    "lastActivityDate": null,
+    "website": "https://www.blessthisstuff.com/stuff/wear/watches/florijn-watch/",
+    "instagramHandle": "blessthisstuff",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Formex",
@@ -1845,6 +2385,21 @@
     "notes": "Handcrafted British watches built to order in their Norfolk workshop. Components manufactured in Norwich. Small workshop, visits by arrangement."
   },
   {
+    "brandName": "Garrick Watches",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.garrickwatchmaker.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Geckota",
     "country": "United Kingdom",
     "townCity": null,
@@ -1860,6 +2415,21 @@
     "notes": "British microbrand known for affordable dive watches and tool watches with Japanese movements. Based in the UK with a focus on practical, no-nonsense timepieces."
   },
   {
+    "brandName": "Gerlach",
+    "country": "Poland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.gerlach.org.pl/en/g-gerlach/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Gigandet",
     "country": "Switzerland",
     "townCity": null,
@@ -1873,6 +2443,21 @@
     "instagramHandle": "gigandet.watch",
     "source": "MBWDB",
     "notes": "Swiss microbrand producing affordable automatic and quartz watches with modern designs. Known for good value proposition in entry-level mechanical watches."
+  },
+  {
+    "brandName": "Giorgio Martino",
+    "country": "Italy",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://giorgiomartino.club/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Glycine",
@@ -1903,6 +2488,36 @@
     "instagramHandle": "graham1695",
     "source": "MBWDB",
     "notes": "British luxury watch brand founded in 1695, known for chronographs and mechanical watches. Produces complications and sports watches with in-house movements."
+  },
+  {
+    "brandName": "Grone Oldenzaal",
+    "country": "Netherlands",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 215,
+    "priceRangeHigh": 215,
+    "status": "Active",
+    "latestModel": "Moment Meter",
+    "lastActivityDate": "2025-12-03",
+    "website": "https://grone.com/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Gruppo Gamma",
+    "country": "Netherlands",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Vanguard",
+    "lastActivityDate": null,
+    "website": "https://www.gruppogamma.com",
+    "instagramHandle": "gruppogamma",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Guinand",
@@ -1950,6 +2565,21 @@
     "notes": "Independent Swiss manufacture founded in 1828, known for haute horlogerie timepieces and distinctive in-house movements. Premium positioning with prices above $5,000 but maintains independence."
   },
   {
+    "brandName": "H2O",
+    "country": "Denmark",
+    "townCity": null,
+    "foundedYear": 2012,
+    "priceRangeLow": 400,
+    "priceRangeHigh": 800,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.h2o-watch.com/",
+    "instagramHandle": "h2owatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Habring²",
     "country": "Austria",
     "townCity": "Völkermarkt, Austria",
@@ -1965,6 +2595,21 @@
     "notes": "Maria and Richard Habring's small atelier in Völkermarkt, Carinthia, Austria. One of the smallest true manufactures — produces around 200 watches per year using repurposed and re-engineered historical ébauches. Exceptional value at this craft level. Personal atelier visits possible by arrangement."
   },
   {
+    "brandName": "Hagley West",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 118,
+    "priceRangeHigh": 215,
+    "status": "Active",
+    "latestModel": "Sport",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://www.hagleywest.com",
+    "instagramHandle": "hagleywestwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Halda",
     "country": "Sweden",
     "townCity": "Gothenburg, Sweden",
@@ -1978,6 +2623,21 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Halda revives Sweden's most historically grounded watch name, rooted in the Svängsta factory established in the 1870s and known for precision instruments and early wristwatches sold across Europe and North America. The modern brand relaunched around 2017–2019 in Gothenburg, producing mechanical watches that reference this Swedish industrial heritage. Visitability of the studio is not publicly documented; access for a luxury group would need to be arranged directly with the brand."
+  },
+  {
+    "brandName": "Hamtun Watches",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Dormant",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.hamtunwatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Hanhart",
@@ -2040,6 +2700,36 @@
     "notes": "British microbrand specializing in dive watches with in-house designed cases. Known for robust tool watches built to professional standards."
   },
   {
+    "brandName": "Henry Archer",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.henryarcherwatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Héron",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Marinor Classic",
+    "lastActivityDate": "2024-10-01",
+    "website": "https://www.heronwatches.com/",
+    "instagramHandle": "heronwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Herzwerk",
     "country": "Germany",
     "townCity": "Munich",
@@ -2068,6 +2758,21 @@
     "instagramHandle": "hgp_hommes_grenouilles_paris",
     "source": "existing-db",
     "notes": "French independent based in Paris. Produces understated tool and field watches with a strong focus on legibility and functional design. Swiss movements. Visitability unconfirmed."
+  },
+  {
+    "brandName": "Holthinrichs Watches",
+    "country": "Netherlands",
+    "townCity": null,
+    "foundedYear": 2016,
+    "priceRangeLow": 4100,
+    "priceRangeHigh": 4100,
+    "status": "Active",
+    "latestModel": "SIGNATURE ORNAMENT",
+    "lastActivityDate": "2025",
+    "website": "https://www.holthinrichs.com",
+    "instagramHandle": "holthinrichswatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Horage",
@@ -2160,6 +2865,21 @@
     "notes": "British microbrand known for vintage-inspired tool watches and military-style timepieces with robust construction."
   },
   {
+    "brandName": "Ingersol",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": 1892,
+    "priceRangeLow": 150,
+    "priceRangeHigh": 400,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.ingersollwatchcompany.com",
+    "instagramHandle": "ingersollwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Iron Annie",
     "country": "Germany",
     "townCity": null,
@@ -2218,6 +2938,21 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Paris-based French independent. Known for hand-finished dress watches with traditional French aesthetic and enamel dial work. Small atelier production. Visitability unconfirmed."
+  },
+  {
+    "brandName": "Jaeger & Benzinger",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.jaeger-benzinger.de",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "James Lamb",
@@ -2293,6 +3028,36 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "British watch brand specializing in military-inspired designs with emphasis on durability and readability."
+  },
+  {
+    "brandName": "Jorg Schauer",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 1000,
+    "priceRangeHigh": 5012,
+    "status": "Active",
+    "latestModel": "Edition 2",
+    "lastActivityDate": "2026-02-01",
+    "website": "https://everywatch.com/jorg-schauer",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "JS Watch Co",
+    "country": "Iceland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.jswatch.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Junghans",
@@ -2610,6 +3375,21 @@
     "notes": "French independent brand founded in Toulouse, producing watches that incorporate materials from French aerospace heritage including certified components from Concorde and Airbus aircraft. Assembly and finishing carried out in France — one of very few genuinely made-in-France independent ateliers. Atelier visits for small luxury groups can be arranged directly; compelling for groups interested in the intersection of French watchmaking and aerospace."
   },
   {
+    "brandName": "Laventure",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.laventure.ch",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Le Garde Temps",
     "country": "France",
     "townCity": "Paris",
@@ -2653,6 +3433,21 @@
     "instagramHandle": "lilienthalberlin",
     "source": "MBWDB",
     "notes": "German microbrand founded 2012, specializing in minimalist urban watches with Bauhaus-influenced design and accessible price range."
+  },
+  {
+    "brandName": "Limes",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.limes-watches.de",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Linde Werdelin",
@@ -2745,6 +3540,51 @@
     "notes": "Swiss independent manufacture founded 1974, known for classic dress watches and chronographs with in-house designed movements and traditional aesthetics."
   },
   {
+    "brandName": "Louis XVI",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.louisxvi.de",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Luch",
+    "country": "Belarus",
+    "townCity": null,
+    "foundedYear": 1950,
+    "priceRangeLow": 130,
+    "priceRangeHigh": 1103,
+    "status": "Active",
+    "latestModel": "Феникс 4.0",
+    "lastActivityDate": "2024-12-19",
+    "website": "https://www.luch.by",
+    "instagramHandle": "luch.official",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Lucleon",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 17,
+    "priceRangeHigh": 100,
+    "status": "Active",
+    "latestModel": "Laurens Ternion Stainless Steel Dual Time Watch",
+    "lastActivityDate": "2024-04-01",
+    "website": "https://www.lucleon.com",
+    "instagramHandle": "trendhim",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Ludek Seryn",
     "country": "Czech Republic",
     "townCity": "Mohelnice, Czech Republic",
@@ -2835,6 +3675,21 @@
     "notes": "British watch brand based in Manchester known for crafting vintage-inspired mechanical watches. Emphasis on British design heritage and independent watchmaking."
   },
   {
+    "brandName": "Manufaktur Waldhoff",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 424,
+    "priceRangeHigh": 2331,
+    "status": "Active",
+    "latestModel": "Quantum Ti",
+    "lastActivityDate": "2024-12-31",
+    "website": "https://www.manufaktur-waldhoff.de",
+    "instagramHandle": "waldhoff_watches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Marc & Sons",
     "country": "Germany",
     "townCity": null,
@@ -2863,6 +3718,21 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Italian independent watchmaker Marco Guarino from Chieri near Turin. Works from a workshop in the hills near Asti, Piedmont. Specialises in astronomical complications."
+  },
+  {
+    "brandName": "Marcello C",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.marcelloc.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "March LA.B",
@@ -3000,6 +3870,21 @@
     "notes": "Founded in 2013 by Eric Mauron and Christophe Musy in Saint-Aubin, Fribourg. Known for patented nO-Ring gasket-free technology and strict 100% Swiss Crafted standard."
   },
   {
+    "brandName": "McGonigle",
+    "country": "Ireland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.mcgonigle.ie",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Meccaniche Veneziane",
     "country": "Italy",
     "townCity": null,
@@ -3105,6 +3990,21 @@
     "notes": "Historic Swiss watchmaker known for chronographs and precision movements, now producing limited-edition watches."
   },
   {
+    "brandName": "Molnija",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": 1947,
+    "priceRangeLow": 341,
+    "priceRangeHigh": 1045,
+    "status": "Active",
+    "latestModel": "Pearl 715",
+    "lastActivityDate": "2025-08-11",
+    "website": "https://molnija.shop/en/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Historic Russian watch manufacturer known for mechanical watches and pocket watches with Soviet heritage."
+  },
+  {
     "brandName": "Mona Watches",
     "country": "France",
     "townCity": "Paris",
@@ -3195,6 +4095,21 @@
     "notes": "Paris-based French independent. Typography and graphic design-inspired dial aesthetic. Swiss-assembled. Direct-to-consumer. Visitability unconfirmed."
   },
   {
+    "brandName": "Nite",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "MX10",
+    "lastActivityDate": "2024-12-31",
+    "website": "https://www.nitewatches.com",
+    "instagramHandle": "nitewatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Nivada",
     "country": "Switzerland",
     "townCity": null,
@@ -3270,6 +4185,36 @@
     "notes": "Swiss independent brand founded in 2017. Known for adventure watches combining Swiss heritage with modern design. Uses automatic movements; positioned in the mid-range market."
   },
   {
+    "brandName": "Norquain",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 2800,
+    "priceRangeHigh": 17000,
+    "status": "Active",
+    "latestModel": "Wild ONE of 1",
+    "lastActivityDate": "2024-12-19",
+    "website": "https://www.norquain.com",
+    "instagramHandle": "norqain",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Objest",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": "2021-01-01",
+    "website": "https://www.objest.com",
+    "instagramHandle": "ObjestStyle",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Officine Tecniche",
     "country": "Italy",
     "townCity": null,
@@ -3313,6 +4258,36 @@
     "instagramHandle": "oligo_watches",
     "source": "existing-db",
     "notes": "Founded in 2022 by Genevan watchmaker Olivier Gaud. All suppliers except strap makers are in French-speaking Switzerland. Workshop in Geneva's Rue des Rois."
+  },
+  {
+    "brandName": "Olto-8",
+    "country": "Italy",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.olto8.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "OOO – Out of Order",
+    "country": "Italy",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.outoforder.cc",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Ophion",
@@ -3375,6 +4350,21 @@
     "notes": "A Greek independent watch brand focused on minimalist and modern watch designs."
   },
   {
+    "brandName": "Paulin",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 24,
+    "priceRangeHigh": 1110,
+    "status": "Active",
+    "latestModel": "Neo Collection",
+    "lastActivityDate": "2026-03-23",
+    "website": "https://www.paulinwatches.com",
+    "instagramHandle": "paulin_watches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Pierre DeRoche",
     "country": "Switzerland",
     "townCity": "La Chaux-de-Fonds",
@@ -3433,6 +4423,21 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Spanish watch brand creating contemporary timepieces with minimalist design aesthetics."
+  },
+  {
+    "brandName": "Poljot",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": 1930,
+    "priceRangeLow": 800,
+    "priceRangeHigh": 2150,
+    "status": "Active",
+    "latestModel": "Tourbillon 3400.XVIII",
+    "lastActivityDate": "2024-12-31",
+    "website": "https://www.poljot-international.com/?lang=en",
+    "instagramHandle": "poljot_international",
+    "source": "MBWDB",
+    "notes": "Historic Russian state watchmaker known for pilot and aviation watches with mechanical movements, currently producing homage and vintage-inspired models."
   },
   {
     "brandName": "Pramzius",
@@ -3555,6 +4560,21 @@
     "notes": "Belgian independent inspired by endurance racing heritage (La Raidillon corner at Spa-Francorchamps). Swiss-assembled. Strong motorsport following. Visitability unconfirmed."
   },
   {
+    "brandName": "Raketa",
+    "country": "Russia",
+    "townCity": "Peterhof, Russia",
+    "foundedYear": 1895,
+    "priceRangeLow": 625,
+    "priceRangeHigh": 5400,
+    "status": "Active",
+    "latestModel": "Malevich Triptych",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://www.raketa.com",
+    "instagramHandle": "raketawatches",
+    "source": "existing-db",
+    "notes": "One of the world's oldest watch factories, tracing origins to a 1721 imperial decree by Peter the Great. The Raketa brand launched in 1961 and still produces its own movements entirely in-house in Peterhof, near St. Petersburg. Factory visits possible."
+  },
+  {
     "brandName": "RALF TECH",
     "country": "France",
     "townCity": "La Rochelle",
@@ -3630,6 +4650,66 @@
     "notes": "Swiss watchmaker founded in 1853, known for mechanical watches including military and sport models. Uses ETA and in-house movements, priced typically under $3,000."
   },
   {
+    "brandName": "RGMT",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.rgmtwatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Richardt & Mejer",
+    "country": "Denmark",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.richardtmejer.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Riskers",
+    "country": "Spain",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://riskers-watches.com/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Ristola",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.ristola.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Roamer",
     "country": "Switzerland",
     "townCity": null,
@@ -3690,6 +4770,51 @@
     "notes": "Swiss independent based in La Chaux-de-Fonds. Design-led with distinctive case shapes. Visitability unconfirmed."
   },
   {
+    "brandName": "Ruckfield",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": "2025-01-01",
+    "website": "https://www.ruckfield.com",
+    "instagramHandle": "ruckfield",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Rudiger",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.rudigerwatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "RUF",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.ruf-watches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Ruhla",
     "country": "Germany",
     "townCity": "Ruhla",
@@ -3718,6 +4843,21 @@
     "instagramHandle": "ferragamo",
     "source": "MBWDB",
     "notes": "Italian luxury fashion house that produces watches alongside clothing and accessories. Known for elegant design and craftsmanship across multiple product categories."
+  },
+  {
+    "brandName": "Sangin Instruments",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.sangin-instruments.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "SARTORY BILLARD",
@@ -3810,6 +4950,21 @@
     "notes": "Italian brand known for sports watches and chronographs at mid-range pricing, active in motorsport and diving watch segments."
   },
   {
+    "brandName": "Seizmont",
+    "country": "Denmark",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 5,
+    "priceRangeHigh": 246,
+    "status": "Active",
+    "latestModel": "Dante II",
+    "lastActivityDate": "2024-04-01",
+    "website": "https://www.seizmont.com",
+    "instagramHandle": "trendhim",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Sekonda",
     "country": "United Kingdom",
     "townCity": null,
@@ -3868,6 +5023,21 @@
     "instagramHandle": "serica_watches",
     "source": "MBWDB",
     "notes": "British microbrand founded in 2012. Known for vintage-inspired automatic watches with in-house dial design and quality Japanese movements. Affordable luxury positioning."
+  },
+  {
+    "brandName": "Sewills",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.sewills.co.uk",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Sherpa",
@@ -3930,6 +5100,21 @@
     "notes": "Historic British watchmaker with heritage roots. Modern iteration produces affordable mechanical watches with classic styling."
   },
   {
+    "brandName": "SNGLRTY Watch",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.snglrty.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Soleilhac",
     "country": "Switzerland",
     "townCity": "Geneva",
@@ -3943,6 +5128,51 @@
     "instagramHandle": null,
     "source": "existing-db",
     "notes": "Founded by Samuel Soleilhac (originally from Saint-Etienne, France). Brand and atelier are based in Geneva; collaborates with Swiss and French subcontractors."
+  },
+  {
+    "brandName": "Söner Watches (Soner)",
+    "country": "Sweden",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 375,
+    "priceRangeHigh": 625,
+    "status": "Active",
+    "latestModel": "Amorous",
+    "lastActivityDate": "2024-12-19",
+    "website": "https://www.sonerwatches.com",
+    "instagramHandle": "sonerwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Sottomarino",
+    "country": "Italy",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.sottomarinowatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Soyuz",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": "2010-12-31",
+    "website": "http://www.soyuz-watch.com/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Russian independent brand specializing in vintage-inspired mechanical watches using Soviet-era design heritage."
   },
   {
     "brandName": "SpaceOne",
@@ -4050,6 +5280,21 @@
     "notes": "German watchmaker based in Hornberg with a history dating back to 1927. Known for Flieger-style pilot watches and tool watches with in-house movements and high-quality finishing."
   },
   {
+    "brandName": "Straum",
+    "country": "Norway",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://straumwatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Strumento Marino",
     "country": "Italy",
     "townCity": null,
@@ -4078,6 +5323,21 @@
     "instagramHandle": "studio.underd0g",
     "source": "existing-db",
     "notes": "Brighton-based independent brand founded by Daan Koper, known for cuisine-themed watch dials with genuine character and a strong community following. Grown rapidly from a one-man operation to thousands of watches per year. The D0ghouse in Brighton serves as the brand's atelier and creative hub. Fun, accessible brand — unusual and memorable visit for groups seeking something beyond traditional watch tourism."
+  },
+  {
+    "brandName": "Studio Underd0g Watches",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.studiounderd0g.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Swan & Edgar",
@@ -4140,6 +5400,21 @@
     "notes": "British microbrand producing tool watches with industrial design aesthetics."
   },
   {
+    "brandName": "Tecnotempo",
+    "country": "Italy",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.tecnotempo.it/english/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Temption",
     "country": "Germany",
     "townCity": "Düsseldorf",
@@ -4170,6 +5445,21 @@
     "notes": "Italian microbrand producing vintage-inspired dive and field watches with attention to dial design and affordable pricing."
   },
   {
+    "brandName": "Theorema",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": 2004,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Casablanca",
+    "lastActivityDate": null,
+    "website": "https://theoremawatches.com/",
+    "instagramHandle": "tufina_watches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Timefactors",
     "country": "United Kingdom",
     "townCity": null,
@@ -4185,6 +5475,36 @@
     "notes": "UK-based independent watchmaker known for vintage-inspired dive watches and tool watches. Uses ETA and Sellita movements with custom cases and dial designs."
   },
   {
+    "brandName": "Timeless Swiss Watch",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://timeless-watch.ch/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Titus Watches",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 130,
+    "priceRangeHigh": 500,
+    "status": "Active",
+    "latestModel": "Modernist",
+    "lastActivityDate": "2024-04-07",
+    "website": "https://www.solvil-et-titus.hk/",
+    "instagramHandle": "solvilettitusofficial",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "TMF (TEMPORANEA MANIFATTURA FIORILLO)",
     "country": "Italy",
     "townCity": null,
@@ -4198,6 +5518,21 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Italian independent watchmaker focused on handcrafted mechanical watches with artisanal approach to design and movement finishing."
+  },
+  {
+    "brandName": "Tourby Watches",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": 2005,
+    "priceRangeLow": 1560,
+    "priceRangeHigh": 5900,
+    "status": "Active",
+    "latestModel": "Marine Automatik 37mm",
+    "lastActivityDate": null,
+    "website": "https://www.tourby.de",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Traser",
@@ -4258,6 +5593,21 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "A German independent watch brand specializing in vintage-inspired mechanical watches and pilot-style timepieces."
+  },
+  {
+    "brandName": "Tuseno",
+    "country": "Sweden",
+    "townCity": null,
+    "foundedYear": 2015,
+    "priceRangeLow": 549,
+    "priceRangeHigh": 1199,
+    "status": "Active",
+    "latestModel": "Shellback V2",
+    "lastActivityDate": "2026-01-01",
+    "website": "https://www.tuseno.com",
+    "instagramHandle": "tusenowatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Tutima",
@@ -4365,6 +5715,21 @@
     "notes": "Italian microbrand established in 2015. Specializes in minimalist dive watches with a focus on vintage aesthetics and Miyota quartz movements, based in Bologna."
   },
   {
+    "brandName": "UTS",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "UTS Professional Diver/GMT Serie",
+    "lastActivityDate": "2012-12-31",
+    "website": "https://www.uts-watches.de",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Valhalla of Norway",
     "country": "Norway",
     "townCity": null,
@@ -4440,6 +5805,21 @@
     "notes": "Venetian independent inspired by the heritage and architecture of Venice. Swiss-assembled with NH35/Miyota movements. Strong micro-brand following. Visitability unconfirmed."
   },
   {
+    "brandName": "Ventura Watches",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.ventura-watches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Vertex",
     "country": "United Kingdom",
     "townCity": "London",
@@ -4485,6 +5865,21 @@
     "notes": "Swiss manufacturer known for Swiss Army watches combining tool functionality with watchmaking, using ETA and Ronda movements across affordable to mid-range price points."
   },
   {
+    "brandName": "Vincenterra",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.vincenterra.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Visconti",
     "country": "Italy",
     "townCity": null,
@@ -4498,6 +5893,51 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "Italian microbrand known for leather goods and watches combining craftsmanship traditions with accessible pricing."
+  },
+  {
+    "brandName": "Vostok",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": 1942,
+    "priceRangeLow": 80,
+    "priceRangeHigh": 400,
+    "status": "Active",
+    "latestModel": "Amphibia",
+    "lastActivityDate": "2024-10-01",
+    "website": "https://www.vostok.ru",
+    "instagramHandle": "vostok_watches",
+    "source": "MBWDB",
+    "notes": "Russian state-owned manufacturer with deep military heritage. Produces durable mechanical watches including iconic Amphibia and Komandirskie dive models."
+  },
+  {
+    "brandName": "Vostok Europe",
+    "country": "Ukraine",
+    "townCity": null,
+    "foundedYear": 2003,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Vilnelė",
+    "lastActivityDate": "2025-01-01",
+    "website": "https://www.vostok-europe.com",
+    "instagramHandle": "vostok.europe.official",
+    "source": "MBWDB",
+    "notes": "Ukrainian independent brand established in 2003. Known for affordable mechanical watches drawing on Soviet military traditions, using Vostok and ETA movements."
+  },
+  {
+    "brandName": "Vostok Samara",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Vostok Retro 55830B",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://buyvostok.com/collections/all",
+    "instagramHandle": "buyvostok",
+    "source": "MBWDB",
+    "notes": "Vostok Samara is a Russian watch manufacturer known for producing mechanical watches with Vostok movements."
   },
   {
     "brandName": "Voxel",
@@ -4530,6 +5970,36 @@
     "notes": "Swiss watchmaker founded in 1858. Historic brand known for mechanical alarm watches and cricket movements, now operating as an independent luxury manufacture."
   },
   {
+    "brandName": "Waldan",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": 1978,
+    "priceRangeLow": null,
+    "priceRangeHigh": 500,
+    "status": "Active",
+    "latestModel": "Heritage Sportline",
+    "lastActivityDate": null,
+    "website": "https://delraywatch.com/waldan-international-1/",
+    "instagramHandle": "delraywatch",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Werenbach",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.werenbach.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
     "brandName": "Wessex Watches",
     "country": "United Kingdom",
     "townCity": null,
@@ -4543,6 +6013,51 @@
     "instagramHandle": "wessexwatches",
     "source": "MBWDB",
     "notes": "British microbrand creating vintage-inspired dress and casual watches. Focus on accessible pricing and classic aesthetics."
+  },
+  {
+    "brandName": "West End Watch Co",
+    "country": "Switzerland",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.westendwatch.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "William L",
+    "country": "France",
+    "townCity": null,
+    "foundedYear": 1985,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.williaml1985.com",
+    "instagramHandle": "williaml1985",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "William Wood",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": 595,
+    "priceRangeHigh": 4795,
+    "status": "Active",
+    "latestModel": "Dunkirk Watch",
+    "lastActivityDate": "2024-10-01",
+    "website": "https://www.williamwoodwatches.com",
+    "instagramHandle": "williamwoodwatches",
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Wolbrook",
@@ -4573,6 +6088,36 @@
     "instagramHandle": "yema_watches",
     "source": "MBWDB",
     "notes": "French microbrand revived from a 1960s heritage brand. Known for vintage-inspired dive watches and field watches with modern reliability."
+  },
+  {
+    "brandName": "Yoshino",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.yoshinowatches.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
+  },
+  {
+    "brandName": "Zeitwinkel",
+    "country": "Germany",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.zeitwinkel.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Unknown brand — manual review needed"
   },
   {
     "brandName": "Zelande",
@@ -4618,6 +6163,36 @@
     "instagramHandle": "zinvo_watches",
     "source": "MBWDB",
     "notes": "Swiss microbrand known for bold, colorful dive watches with contemporary design. Offers quartz and automatic movements at accessible price points."
+  },
+  {
+    "brandName": "Zlatoust",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "193 CHS",
+    "lastActivityDate": "2024-01-01",
+    "website": "https://agatwatch.com/",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Russian watch factory and brand with history dating to Soviet era. Known for mechanical watches and tool watches produced in Zlatoust."
+  },
+  {
+    "brandName": "Zlatoust Watch",
+    "country": "Russia",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": null,
+    "website": "https://www.zlatoust.com",
+    "instagramHandle": null,
+    "source": "MBWDB",
+    "notes": "Russian watch brand associated with Zlatoust factory heritage. Produces mechanical watches with historical Soviet manufacturing roots."
   },
   {
     "brandName": "ZRC",
