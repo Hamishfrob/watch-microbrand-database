@@ -76,6 +76,8 @@ function save(filename, data) {
 function needsWork(brand) {
   if (FORCE) return true;
   return !brand.website
+    || !brand.country
+    || !brand.townCity
     || brand.instagramHandle  == null
     || brand.priceRangeLow    == null
     || brand.foundedYear      == null
@@ -151,6 +153,8 @@ function findShopLink(html, baseUrl) {
 
 const EXTRACT_SCHEMA = `{
   "website": "https://...",          // correct official URL, or null
+  "country": "Germany",              // full country name in English, or null
+  "townCity": "Hamburg",             // city or town the brand is based in, or null
   "instagramHandle": "...",          // username without @, or null
   "priceRangeLow": 350,              // lowest current USD price as integer, or null
   "priceRangeHigh": 650,             // highest current USD price as integer, or null
@@ -232,7 +236,7 @@ async function processBrand(client, brand, filename, data) {
   if (!extracted) return 'no-data';
 
   const fields = [
-    'website', 'instagramHandle',
+    'website', 'country', 'townCity', 'instagramHandle',
     'priceRangeLow', 'priceRangeHigh',
     'foundedYear', 'latestModel',
     'status', 'lastActivityDate', 'notes',
