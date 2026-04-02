@@ -84,6 +84,54 @@ node scripts/check-websites.js --errors-only  # problems only
 
 ---
 
+## Enrichment Pipeline
+
+Data quality comes from a three-step pipeline. Run these in order when building or refreshing the database.
+
+### Step 1 — Find websites (Claude knowledge)
+```
+node scripts/find-websites.js
+node scripts/find-websites.js --region europe
+```
+Uses Claude's training knowledge to populate missing website URLs in batches of 50. Fast and cheap. Gets ~80% of missing URLs. Run once when adding new brands.
+
+### Step 2 — Scrape and extract (first pass)
+```
+node scripts/scrape-brands.js
+node scripts/scrape-brands.js --region europe
+```
+Fetches each brand homepage. Extracts Instagram handles via regex. Sends page text to Claude Haiku for prices, founded year, latest model, and notes. Fills nulls only — never overwrites existing data.
+
+### Step 3 — Re-enrich with URL verification (quality pass / monthly refresh)
+```
+node scripts/re-enrich.js
+node scripts/re-enrich.js --region europe
+node scripts/re-enrich.js --force          # overwrite all existing data (monthly refresh)
+```
+The highest-quality enrichment pass:
+- **Verifies each website URL** — fetches it and asks Claude if it's the right brand; if wrong, searches Brave for the correct URL
+- **Follows shop/collection links** from the homepage for better price extraction
+- **Assesses brand status** (Active / Dormant / Defunct) from page content
+- **Updates lastActivityDate** from page signals (blog posts, new model dates, etc.)
+- Requires a Brave Search API key (free tier: 2000 requests/month)
+
+### API keys required
+
+| Key | Used by | Where to get |
+|-----|---------|--------------|
+| `ANTHROPIC_API_KEY` | All enrichment scripts | [console.anthropic.com](https://console.anthropic.com) |
+| `BRAVE_API_KEY` | `re-enrich.js` only | [brave.com/search/api](https://brave.com/search/api/) — free tier available |
+
+Add both to your `.env` file (see `.env.example`).
+
+### Known limitations
+
+- Sites behind Cloudflare or aggressive bot-protection return fetch errors (~15–20% of brands)
+- Prices are only found when displayed on the homepage or a linked shop/collection page; JS-heavy storefronts are not scraped
+- Run `re-enrich.js --force` monthly to refresh status, prices, and latest models
+
+---
+
 ## Scripts
 
 | Script | Purpose |
@@ -92,6 +140,10 @@ node scripts/check-websites.js --errors-only  # problems only
 | `seed-from-existing-db.js` | One-shot: seed from 438-brand location DB |
 | `import-mbwdb.js` | One-shot: import from mbwdb.com |
 | `check-websites.js` | Health-check all website URLs |
+| `find-websites.js` | Populate missing website URLs via Claude knowledge |
+| `scrape-brands.js` | First-pass enrichment: homepage scrape + Claude extraction |
+| `re-enrich.js` | Quality enrichment: URL verification via Brave Search, shop page following, status assessment |
+| `dedupe.js` | Remove duplicate brand entries across regional files |
 
 ---
 
@@ -100,3 +152,4 @@ node scripts/check-websites.js --errors-only  # problems only
 | Version | Date | Notes |
 |---------|------|-------|
 | 1.0 | 2026-04-01 | Initial build. Seeded from existing location DB (Independent tier) + MBWDB import. |
+| 1.1 | 2026-04-02 | Enrichment pipeline added. 451 brands enriched across Europe / Americas / Asia-Pacific. |
