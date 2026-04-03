@@ -230,9 +230,8 @@ function parseDirectory(html, siteUrl) {
 
 // ─── Claude extraction ───────────────────────────────────────────────────────
 
-const client = new Anthropic();
-
 async function extractBrandsFromArticle(text) {
+  const client = new Anthropic();
   const msg = await client.messages.create({
     model:      MODEL,
     max_tokens: 256,
@@ -271,7 +270,7 @@ function processBrands(foundNames, lookup, sourceSite, sourceUrl) {
     const match = lookup.get(key);
 
     if (match) {
-      match.brand.lastActivityDate = TODAY;
+      match.brand.lastActivityDate = TODAY;  // update date for all matches, including Dormant/Defunct
       if (match.brand.status === 'Dormant' || match.brand.status === 'Defunct') {
         flags.push({ brand: match.brand, filename: match.filename, reason: match.brand.status });
       } else {
