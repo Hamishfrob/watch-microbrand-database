@@ -190,3 +190,129 @@ function extractArticleLinks(html, baseUrl) {
   }
   return links;
 }
+
+// ─── DB lookup ───────────────────────────────────────────────────────────────
+
+function normaliseName(name) {
+  return name
+    .toLowerCase()
+    .replace(/\s+(watch(es)?|co\.?|ltd\.?|srl\.?|gmbh\.?|s\.a\.?|inc\.?)$/i, '')
+    .replace(/[^a-z0-9]/g, '')
+    .trim();
+}
+
+function buildLookup() {
+  // Map: normalisedName → { brand, filename }
+  const lookup = new Map();
+  for (const filename of ALL_REGION_FILES) {
+    const brands = load(filename);
+    for (const brand of brands) {
+      const key = normaliseName(brand.brandName);
+      if (key) lookup.set(key, { brand, filename });
+    }
+  }
+  return lookup;
+}
+
+// ─── Directory parser ────────────────────────────────────────────────────────
+
+function parseDirectory(html, siteUrl) {
+  const brandNames = [];
+  // Match anchor tags pointing to brand sub-pages: /en/brands/something/
+  const re = /href=["'][^"']*\/brands\/[a-z0-9-]+\/["'][^>]*>([^<]{2,60})<\/a>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const name = m[1].trim();
+    if (name && !brandNames.includes(name)) brandNames.push(name);
+  }
+  return brandNames;
+}
+
+// ─── Claude extraction ───────────────────────────────────────────────────────
+
+const client = new Anthropic();
+
+async function extractBrandsFromArticle(text) {
+  const msg = await client.messages.create({
+    model:      MODEL,
+    max_tokens: 256,
+    messages: [{
+      role:    'user',
+      content: `Extract all watch brand names mentioned in this article text. Return ONLY a JSON array of strings (brand names). Include microbrands and independent brands. Do not include model names, just brand names. If no brands are mentioned return [].
+
+Article:
+${text}`,
+    }],
+  });
+
+  try {
+    const raw = msg.content[0].text.trim();
+    // Strip markdown code fences if present
+    const json = raw.replace(/^```json?\s*/i, '').replace(/```\s*$/i, '').trim();
+    const parsed = JSON.parse(json);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+// ─── Matching ────────────────────────────────────────────────────────────────
+
+const TODAY = new Date().toISOString().slice(0, 10);
+
+function processBrands(foundNames, lookup, sourceSite, sourceUrl) {
+  const updates  = [];   // { brand, filename } — update lastActivityDate
+  const flags    = [];   // { brand, filename, reason } — Dormant/Defunct, flag for review
+  const newFound = [];   // { brandName, sourceSite, sourceUrl } — not in DB
+
+  for (const name of foundNames) {
+    const key   = normaliseName(name);
+    if (!key) continue;
+    const match = lookup.get(key);
+
+    if (match) {
+      match.brand.lastActivityDate = TODAY;
+      if (match.brand.status === 'Dormant' || match.brand.status === 'Defunct') {
+        flags.push({ brand: match.brand, filename: match.filename, reason: match.brand.status });
+      } else {
+        updates.push({ brand: match.brand, filename: match.filename });
+      }
+    } else {
+      newFound.push({ brandName: name, sourceSite, sourceUrl, discoveredDate: TODAY });
+    }
+  }
+
+  return { updates, flags, newFound };
+}
+
+// ─── Candidates ──────────────────────────────────────────────────────────────
+
+function mergeCandidates(existing, newFound) {
+  const existingNames = new Set(existing.map(c => normaliseName(c.brandName)));
+  const toAdd = newFound.filter(c => !existingNames.has(normaliseName(c.brandName)));
+  return [...existing, ...toAdd];
+}
+
+// ─── Report ──────────────────────────────────────────────────────────────────
+
+function printReport({ sitesChecked, articlesTotal, brandsFound, dbUpdated, flagged, candidates, dryRun }) {
+  const line = '─'.repeat(50);
+  console.log(`\nRun: ${TODAY}${dryRun ? '  [DRY RUN — no writes]' : ''}`);
+  console.log(line);
+  console.log(`Sites checked:      ${sitesChecked}`);
+  console.log(`Articles fetched:   ${articlesTotal}`);
+  console.log(`Brand names found:  ${brandsFound}`);
+  console.log('');
+  console.log(`DB matches updated: ${dbUpdated}`);
+  if (flagged.length) {
+    console.log(`Flags for review:   ${flagged.length}`);
+    for (const f of flagged) {
+      console.log(`  [${f.reason}] ${f.brand.brandName}`);
+    }
+  } else {
+    console.log(`Flags for review:   0`);
+  }
+  console.log('');
+  console.log(`New candidates:     ${candidates}  → data/candidates.json`);
+  console.log(line + '\n');
+}
