@@ -21,16 +21,27 @@ const Anthropic = require('@anthropic-ai/sdk');
 const fs        = require('fs');
 const path      = require('path');
 
+// ─── Config ───────────────────────────────────────────────────────────────────
+
 const DATA_DIR       = path.join(__dirname, '..', 'data');
 const MODEL          = 'claude-haiku-4-5';
 const FETCH_TIMEOUT  = 10_000;
 const MAX_PAGE_CHARS = 6_000;
-const MAX_ARTICLES_PER_SITE = 5;
+const MAX_ARTICLES_PER_SITE = 5; // hard cap per blog site regardless of --limit
 
 const DRY_RUN = process.argv.includes('--dry-run');
-const LIMIT   = process.argv.includes('--limit')
-  ? parseInt(process.argv[process.argv.indexOf('--limit') + 1], 10)
-  : Infinity;
+const LIMIT = (() => {
+  const idx = process.argv.indexOf('--limit');
+  if (idx === -1) return Infinity;
+  const n = parseInt(process.argv[idx + 1], 10);
+  if (isNaN(n) || n < 1) {
+    console.error('Error: --limit requires a positive integer');
+    process.exit(1);
+  }
+  return n;
+})();
+
+// ─── Sites ────────────────────────────────────────────────────────────────────
 
 const SITES = [
   {
@@ -84,6 +95,8 @@ const ALL_REGION_FILES = [
 
 const CANDIDATES_FILE = path.join(DATA_DIR, 'candidates.json');
 
+// ─── File I/O ─────────────────────────────────────────────────────────────────
+
 function load(filename) {
   const fp = path.join(DATA_DIR, filename);
   if (!fs.existsSync(fp)) return [];
@@ -91,6 +104,7 @@ function load(filename) {
 }
 
 function save(filename, data) {
+  if (DRY_RUN) return;
   const sorted = [...data].sort((a, b) =>
     (a.brandName || '').localeCompare(b.brandName || '', 'en', { sensitivity: 'base' })
   );
@@ -103,5 +117,9 @@ function loadCandidates() {
 }
 
 function saveCandidates(candidates) {
-  fs.writeFileSync(CANDIDATES_FILE, JSON.stringify(candidates, null, 2), 'utf8');
+  if (DRY_RUN) return;
+  const sorted = [...candidates].sort((a, b) =>
+    (a.brandName || '').localeCompare(b.brandName || '', 'en', { sensitivity: 'base' })
+  );
+  fs.writeFileSync(CANDIDATES_FILE, JSON.stringify(sorted, null, 2), 'utf8');
 }
