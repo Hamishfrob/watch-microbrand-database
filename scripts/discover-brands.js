@@ -315,3 +315,91 @@ function printReport({ sitesChecked, articlesTotal, brandsFound, dbUpdated, flag
   console.log(`New candidates:     ${candidates}  → data/candidates.json`);
   console.log(line + '\n');
 }
+
+// ─── Main ────────────────────────────────────────────────────────────────────
+
+async function main() {
+  const lookup     = buildLookup();
+  const allRegions = {};                   // filename → brands array (for saving)
+  for (const f of ALL_REGION_FILES) allRegions[f] = load(f);
+
+  let articlesTotal   = 0;
+  let allNewFound     = [];
+  let allFlags        = [];
+  let allDbUpdated    = 0;
+  let allBrandsFound  = 0;
+  let limitRemaining  = LIMIT;
+
+  for (const site of SITES) {
+    console.log(`\nChecking: ${site.name}`);
+    const page = await fetchPage(site.url);
+    if (!page) { console.log('  ✗ fetch failed'); continue; }
+
+    let brandNames = [];
+
+    if (site.type === 'directory') {
+      brandNames = parseDirectory(page.html, site.url);
+      console.log(`  parsed ${brandNames.length} brands (no AI)`);
+
+    } else {
+      // blog: extract article links, fetch each, extract brands
+      const articleLinks = extractArticleLinks(page.html, site.url);
+      const toFetch = articleLinks.slice(0, Math.min(MAX_ARTICLES_PER_SITE, limitRemaining));
+      console.log(`  found ${articleLinks.length} article links, fetching ${toFetch.length}`);
+
+      for (const link of toFetch) {
+        if (limitRemaining <= 0) break;
+        const ap = await fetchPage(link);
+        if (!ap) continue;
+        const text   = stripHtml(ap.html);
+        const brands = await extractBrandsFromArticle(text);
+        brandNames.push(...brands);
+        articlesTotal++;
+        limitRemaining--;
+        console.log(`  ${link} → ${brands.length} brands`);
+      }
+    }
+
+    allBrandsFound += brandNames.length;
+
+    const { updates, flags, newFound } = processBrands(
+      [...new Set(brandNames)],   // dedupe within site
+      lookup,
+      site.name,
+      site.url
+    );
+
+    allDbUpdated += updates.length;
+    allFlags.push(...flags);
+    allNewFound.push(...newFound);
+
+    // Apply updates to in-memory region data
+    for (const u of [...updates, ...flags]) {
+      const arr = allRegions[u.filename];
+      const idx = arr.findIndex(b => b.brandName === u.brand.brandName);
+      if (idx !== -1) arr[idx] = u.brand;
+    }
+  }
+
+  // Write DB updates
+  if (!DRY_RUN) {
+    for (const [filename, brands] of Object.entries(allRegions)) {
+      save(filename, brands);
+    }
+    const existing   = loadCandidates();
+    const merged     = mergeCandidates(existing, allNewFound);
+    saveCandidates(merged);
+  }
+
+  printReport({
+    sitesChecked:  SITES.length,
+    articlesTotal,
+    brandsFound:   allBrandsFound,
+    dbUpdated:     allDbUpdated,
+    flagged:       allFlags,
+    candidates:    allNewFound.length,
+    dryRun:        DRY_RUN,
+  });
+}
+
+main().catch(err => { console.error(err); process.exit(1); });
