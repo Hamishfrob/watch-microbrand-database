@@ -46,7 +46,7 @@ const LIMIT = (() => {
 const SITES = [
   {
     name: 'Chronoscout',
-    url:  'https://chronoscout.co/en/brands/',
+    url:  'https://chronoscout.co/sitemap.xml',
     type: 'directory',
   },
   {
@@ -218,11 +218,19 @@ function buildLookup() {
 
 function parseDirectory(html, siteUrl) {
   const brandNames = [];
-  // Match anchor tags pointing to brand sub-pages: /en/brands/something/
-  const re = /href=["'][^"']*\/brands\/[a-z0-9-]+\/["'][^>]*>([^<]{2,60})<\/a>/gi;
+  // Chronoscout is a SPA — brand links don't appear in the initial HTML.
+  // Instead, parse brand name slugs from sitemap URLs:
+  //   https://chronoscout.co/en/brand/<id>/<name-slug>/
+  // Primary pattern: /en/brand/<id>/<slug>/ or /de/brand/<id>/<slug>/
+  const re = /\/(?:en|de)\/brand\/[A-Za-z0-9_-]+\/([a-z0-9][a-z0-9-]{1,60})\//g;
   let m;
   while ((m = re.exec(html)) !== null) {
-    const name = m[1].trim();
+    const slug = m[1];
+    // Convert kebab-case slug → Title Case brand name
+    const name = slug
+      .split('-')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
     if (name && !brandNames.includes(name)) brandNames.push(name);
   }
   return brandNames;
@@ -360,10 +368,11 @@ async function main() {
       }
     }
 
-    allBrandsFound += brandNames.length;
+    const deduped = [...new Set(brandNames)];
+    allBrandsFound += deduped.length;
 
     const { updates, flags, newFound } = processBrands(
-      [...new Set(brandNames)],   // dedupe within site
+      deduped,
       lookup,
       site.name,
       site.url
@@ -380,6 +389,15 @@ async function main() {
       if (idx !== -1) arr[idx] = u.brand;
     }
   }
+
+  // Dedupe new candidates across sites (same brand may appear on multiple sites)
+  const seenNew = new Set();
+  allNewFound = allNewFound.filter(c => {
+    const key = normaliseName(c.brandName);
+    if (seenNew.has(key)) return false;
+    seenNew.add(key);
+    return true;
+  });
 
   // Write DB updates
   if (!DRY_RUN) {
