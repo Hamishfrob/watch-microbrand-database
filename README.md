@@ -102,30 +102,47 @@ node scripts/scrape-brands.js --region europe
 ```
 Fetches each brand homepage. Extracts Instagram handles via regex. Sends page text to Claude Haiku for prices, founded year, latest model, and notes. Fills nulls only — never overwrites existing data.
 
-### Step 3 — Re-enrich with live web search (quality pass / monthly refresh)
+### Step 3 — Re-enrich (quality pass / monthly refresh)
 ```
 node scripts/re-enrich.js
 node scripts/re-enrich.js --region europe
 node scripts/re-enrich.js --force          # overwrite all existing data (monthly refresh)
 ```
-The highest-quality enrichment pass. Uses Claude with Anthropic's built-in web search and web fetch tools — no extra API keys needed:
-- **Finds and verifies the official website** via live web search (fixes wrong URLs like Dufa → deutsche-uhrenfabrik.de)
+The highest-quality enrichment pass. Fetches brand homepages + shop pages manually (no Anthropic web tools — too expensive), sends stripped page text to Claude Haiku for extraction:
+- **Finds and verifies the official website** via Brave Search API
 - **Fetches homepage + shop/collection pages** for accurate price extraction
 - **Assesses brand status** (Active / Dormant / Defunct) from current page content
-- **Updates lastActivityDate** from live page signals (blog posts, new models, etc.)
+- **Updates lastActivityDate** from live page signals
+
+### Step 4 — Weekly discovery (new brands + activity refresh)
+```
+node scripts/discover-brands.js            # full run
+node scripts/discover-brands.js --dry-run  # preview only, no writes
+node scripts/discover-brands.js --limit 5  # cap AI calls for testing
+```
+Scrapes 8 microbrand watch sites weekly to:
+- **Discover new brands** not yet in the DB → written to `data/candidates.json` for review
+- **Refresh activity signals** for existing brands → updates `lastActivityDate`
+- **Flag Dormant/Defunct** brands that appear in reviews (for manual status review)
+
+Sites covered: Chronoscout (directory, zero AI), Mainspring, The Timebum, Balance & Bridge, Hype & Style, Kaminsky, Le Petit Poussoir, Chrononautix.
+
+Cost: ~$0.25/week. Candidates require manual review before promotion to regional files.
 
 ### API keys required
 
 | Key | Used by | Where to get |
 |-----|---------|--------------|
-| `ANTHROPIC_API_KEY` | All enrichment scripts | [console.anthropic.com](https://console.anthropic.com) |
+| `ANTHROPIC_API_KEY` | All enrichment + discovery scripts | [console.anthropic.com](https://console.anthropic.com) |
+| `BRAVE_API_KEY` | `re-enrich.js` (URL verification) | [brave.com/search/api](https://brave.com/search/api) — free tier |
 
-Add to your `.env` file (see `.env.example`). No other API keys needed.
+Add to your `.env` file.
 
 ### Known limitations
 
 - Some sites behind aggressive bot-protection may not be fetchable (~10–15% of brands)
 - Prices are only found when displayed on accessible shop/collection pages
+- `discover-brands.js` candidates include false positives — always review before adding to DB
 - Run `re-enrich.js --force` monthly to refresh status, prices, and latest models
 
 ---
@@ -135,13 +152,14 @@ Add to your `.env` file (see `.env.example`). No other API keys needed.
 | Script | Purpose |
 |--------|---------|
 | `build-spreadsheet.js` | Regenerate Excel from JSON files |
-| `seed-from-existing-db.js` | One-shot: seed from 438-brand location DB |
-| `import-mbwdb.js` | One-shot: import from mbwdb.com |
+| `discover-brands.js` | Weekly discovery: scrape 8 sites, find new brands + refresh activity dates |
+| `re-enrich.js` | Quality enrichment: URL verification via Brave Search, shop page following, status assessment |
 | `check-websites.js` | Health-check all website URLs |
 | `find-websites.js` | Populate missing website URLs via Claude knowledge |
 | `scrape-brands.js` | First-pass enrichment: homepage scrape + Claude extraction |
-| `re-enrich.js` | Quality enrichment: URL verification via Brave Search, shop page following, status assessment |
 | `dedupe.js` | Remove duplicate brand entries across regional files |
+| `seed-from-existing-db.js` | One-shot: seed from 438-brand location DB |
+| `import-mbwdb.js` | One-shot: import from mbwdb.com |
 
 ---
 
@@ -151,3 +169,4 @@ Add to your `.env` file (see `.env.example`). No other API keys needed.
 |---------|------|-------|
 | 1.0 | 2026-04-01 | Initial build. Seeded from existing location DB (Independent tier) + MBWDB import. |
 | 1.1 | 2026-04-02 | Enrichment pipeline added. 451 brands enriched across Europe / Americas / Asia-Pacific. |
+| 1.2 | 2026-04-04 | Weekly discovery script added (`discover-brands.js`). 1,241 brands. First discovery run: 229 activity dates refreshed, 125 candidates queued. |
