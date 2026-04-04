@@ -174,6 +174,8 @@ function extractArticleLinks(html, baseUrl) {
       // must be a deeper path (not just / or /en/)
       const parts = url.pathname.replace(/\/$/, '').split('/').filter(Boolean);
       if (parts.length < 1) continue;
+      // skip static assets
+      if (/\.(css|js|jpg|jpeg|png|gif|svg|ico|webp|woff|woff2|ttf|eot|pdf|zip)(\?|$)/i.test(url.pathname)) continue;
       // skip obvious nav pages
       const skip = /^(about|contact|category|tag|author|page|search|feed|wp-|cdn-|#)/i;
       if (skip.test(url.pathname)) continue;
