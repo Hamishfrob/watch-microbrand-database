@@ -41,6 +41,32 @@ const LIMIT = (() => {
   return n;
 })();
 
+// ─── Blocklist ────────────────────────────────────────────────────────────────
+// Brands to exclude from candidates: luxury conglomerates, mass-market, movement
+// makers, accessory brands, and generic terms. Matched via normaliseName().
+
+const BLOCKLIST = new Set([
+  // Luxury / conglomerate-owned brands (>$5k, not microbrands)
+  'audemarspiguet', 'blancpain', 'breguet', 'breitling', 'cartier',
+  'chopard', 'glashutteoriginal', 'hublot', 'iwc', 'jaegerlecoultre',
+  'longines', 'omegawatch', 'omega', 'panerai', 'patekphilippe',
+  'piaget', 'richardmille', 'rolex', 'tagheuer', 'tissot', 'tudor',
+  'vacheronconstantin', 'zenith',
+  // Mass-market
+  'casio', 'citizen', 'ferrari', 'mvmt', 'rado', 'seiko', 'swatch',
+  // Movement / component makers (not watch brands)
+  'duboisdeepraz', 'duboisdeepraz', 'eta', 'miyota', 'seagull', 'sellita', 'soprod',
+  // Accessories / non-watch brands
+  'nomad', 'rsmwatchstraps', 'watchbandit',
+  // Historical German watchmakers (not active brands)
+  'ferdinandadolphlange', 'friedrichaugustadolfschneider',
+  'juliuscarlfriederichassmann', 'juliuscarlfriederickassmann',
+  // Generic / service names
+  'chronorestore', 'swisswatchcompany', 'technics',
+  // Hamilton is technically Swatch Group (mass market)
+  'hamilton',
+].map(n => n.replace(/[^a-z0-9]/g, '')));
+
 // ─── Sites ────────────────────────────────────────────────────────────────────
 
 const SITES = [
@@ -277,6 +303,7 @@ function processBrands(foundNames, lookup, sourceSite, sourceUrl) {
   for (const name of foundNames) {
     const key   = normaliseName(name);
     if (!key) continue;
+    if (BLOCKLIST.has(key)) continue;  // skip known non-microbrands
     const match = lookup.get(key);
 
     if (match) {
