@@ -321,6 +321,7 @@ function printReport({ sitesChecked, articlesTotal, brandsFound, dbUpdated, flag
   }
   console.log('');
   console.log(`New candidates:     ${candidates}  → data/candidates.json`);
+  console.log(`Estimated cost:     ~$${(articlesTotal * 0.01).toFixed(2)}`);
   console.log(line + '\n');
 }
 
