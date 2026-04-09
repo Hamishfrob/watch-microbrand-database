@@ -106,13 +106,25 @@ Fetches each brand homepage. Extracts Instagram handles via regex. Sends page te
 ```
 node scripts/re-enrich.js
 node scripts/re-enrich.js --region europe
-node scripts/re-enrich.js --force          # overwrite all existing data (monthly refresh)
+node scripts/re-enrich.js --force            # overwrite all existing data (monthly refresh)
+node scripts/re-enrich.js --force-location   # overwrite country/townCity only
 ```
 The highest-quality enrichment pass. Fetches brand homepages + shop pages manually (no Anthropic web tools — too expensive), sends stripped page text to Claude Haiku for extraction:
-- **Finds and verifies the official website** via Brave Search API
 - **Fetches homepage + shop/collection pages** for accurate price extraction
 - **Assesses brand status** (Active / Dormant / Defunct) from current page content
 - **Updates lastActivityDate** from live page signals
+
+### Step 3b — Location enrichment via Brave Search
+```
+node scripts/find-locations-brave.js
+node scripts/find-locations-brave.js --region other
+node scripts/find-locations-brave.js --force-location   # re-check/correct existing countries
+```
+Uses Brave Search snippets + Claude Haiku to find and correct country/city data when homepage content alone isn't enough. Extracts all schema fields from search snippets — no extra page fetches. Run after `re-enrich.js` for brands still missing a country, or with `--force-location` to fix known incorrect locations.
+- **Primary search:** `"{BrandName} watches"` — broad, surfaces reviews and community posts naming the country
+- **Fallback search:** `"{BrandName} watches review"` — if primary yields no country
+- Brave free tier: 2,000 queries/month (sufficient for the full database)
+- Cost: ~$0.002/brand Haiku cost; Brave queries are free tier
 
 ### Step 4 — Weekly discovery (new brands + activity refresh)
 ```
@@ -156,6 +168,8 @@ Add to your `.env` file.
 | `re-enrich.js` | Quality enrichment: URL verification via Brave Search, shop page following, status assessment |
 | `check-websites.js` | Health-check all website URLs |
 | `find-websites.js` | Populate missing website URLs via Claude knowledge |
+| `find-websites-brave.js` | Populate missing website URLs via Brave Search |
+| `find-locations-brave.js` | Find/correct country + city via Brave Search snippets + Haiku |
 | `scrape-brands.js` | First-pass enrichment: homepage scrape + Claude extraction |
 | `dedupe.js` | Remove duplicate brand entries across regional files |
 | `seed-from-existing-db.js` | One-shot: seed from 438-brand location DB |
@@ -170,3 +184,4 @@ Add to your `.env` file.
 | 1.0 | 2026-04-01 | Initial build. Seeded from existing location DB (Independent tier) + MBWDB import. |
 | 1.1 | 2026-04-02 | Enrichment pipeline added. 451 brands enriched across Europe / Americas / Asia-Pacific. |
 | 1.2 | 2026-04-04 | Weekly discovery script added (`discover-brands.js`). 1,241 brands. First discovery run: 229 activity dates refreshed, 125 candidates queued. |
+| 1.3 | 2026-04-09 | Location enrichment pipeline added (`find-locations-brave.js`). Deduplication pass. Full re-enrich + Brave location run on other.json: 179/318 brands now have country data. 1,237 brands total. |
