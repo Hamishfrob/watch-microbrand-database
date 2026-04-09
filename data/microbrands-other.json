@@ -2025,21 +2025,6 @@
     "notes": "No brand 'Montres Une' found in provided content. The pages shown are for Montre.com, a watch retailer in the Netherlands (Holland Watch Group B.V.), not a watch brand called 'Montres Une.'"
   },
   {
-    "brandName": "Moritz Großmann",
-    "country": "Germany",
-    "townCity": "Glashütte",
-    "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
-    "status": "Active",
-    "latestModel": "Tremblage",
-    "lastActivityDate": "2026-04-04",
-    "website": "https://www.grossmann-uhren.com",
-    "instagramHandle": "moritz_grossmann_",
-    "source": "MBWDB",
-    "notes": "Independent German watch manufacturer based in Glashütte, Germany's historic watchmaking region. Produces luxury mechanical watches with in-house movements, featuring distinctive design elements like tourbillons, perpetual calendars, and hand-finished complications. Known for handcrafted quality and contemporary interpretations of traditional German watchmaking heritage."
-  },
-  {
     "brandName": "MoVas",
     "country": null,
     "townCity": null,
@@ -2263,21 +2248,6 @@
     "instagramHandle": null,
     "source": "MBWDB",
     "notes": "No reliable information available in training data for NOMADIC TURAS watch brand."
-  },
-  {
-    "brandName": "Nomos",
-    "country": "Germany",
-    "townCity": "Glashütte",
-    "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
-    "status": "Active",
-    "latestModel": "Club Campus",
-    "lastActivityDate": "2026-04-04",
-    "website": "https://www.nomos-glashuette.com",
-    "instagramHandle": "nomos_glashuette",
-    "source": "MBWDB",
-    "notes": "NOMOS Glashütte manufactures luxury mechanical watches in Germany with thirteen model families and twelve in-house calibers. Known for minimalist Bauhaus-inspired design and precision watchmaking traditions in Glashütte."
   },
   {
     "brandName": "Nordic Marine",
@@ -3361,7 +3331,7 @@
   },
   {
     "brandName": "Whitby Watch Co",
-    "country": "United Kingdom",
+    "country": "Canada",
     "townCity": "Whitby",
     "foundedYear": null,
     "priceRangeLow": 270,

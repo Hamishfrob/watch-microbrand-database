@@ -3150,21 +3150,6 @@
     "notes": "Historic Swiss brand based in La Chaux-de-Fonds. Founded in the early 20th century. Known for the integrated bracelet construction — the Eska bracelet was a significant technical achievement. Revived and continuing the tradition. Visitability unconfirmed."
   },
   {
-    "brandName": "Eska Watches",
-    "country": "France",
-    "townCity": "Besançon",
-    "foundedYear": 1918,
-    "priceRangeLow": 452,
-    "priceRangeHigh": 1936,
-    "status": "Active",
-    "latestModel": "Light Racing Range",
-    "lastActivityDate": "2026-04-04",
-    "website": "https://www.eskawatches.com/en",
-    "instagramHandle": "eska.watches",
-    "source": "MBWDB",
-    "notes": "Founded in 1918 as a Swiss brand, Eska was revived in the mid-2020s by two watchmaking enthusiasts (Christophe & Sinicha) and is now assembled in Besançon, France. The brand is known for elegant dress watches with guilloché dials and historic diver models."
-  },
-  {
     "brandName": "Evolvens",
     "country": "Hungary",
     "townCity": "Budapest",
@@ -5475,21 +5460,6 @@
     "notes": "Marlinwatch is a diver watch micro brand designing and selling direct to consumers. They specialize in 43mm-45mm stainless steel chronograph and diver watches, offering products from £300 and operating across UK and USA markets."
   },
   {
-    "brandName": "Marloe Watch Co.",
-    "country": "United Kingdom",
-    "townCity": "London",
-    "foundedYear": 2015,
-    "priceRangeLow": 350,
-    "priceRangeHigh": 650,
-    "status": "Active",
-    "latestModel": "Atlantic - Fortune",
-    "lastActivityDate": null,
-    "website": "https://www.marloewatchco.com",
-    "instagramHandle": "marloewatch",
-    "source": "MBWDB",
-    "notes": "British independent watch brand producing tool watches and dress watches with modern design sensibilities and accessible pricing."
-  },
-  {
     "brandName": "Marloe Watch Company",
     "country": "United Kingdom",
     "townCity": "Henley-on-Thames",
@@ -6403,21 +6373,6 @@
     "instagramHandle": "thenowatch",
     "source": "MBWDB",
     "notes": "Dutch watch brand designed in Amsterdam and made in Europe. Known for the NOWATCH, described as the world's first Awareable analog watch that tracks nervous system health via Reactivity Monitor technology. Offers two main collections: NOWATCH B (comfort-focused) and NOWATCH X (curated craftsmanship)."
-  },
-  {
-    "brandName": "Nodus",
-    "country": "United States",
-    "townCity": "Los Angeles",
-    "foundedYear": 2017,
-    "priceRangeLow": 400,
-    "priceRangeHigh": 800,
-    "status": "Active",
-    "latestModel": "Avalon",
-    "lastActivityDate": "2024-09-01",
-    "website": "https://www.noduswatch.com",
-    "instagramHandle": "noduswatch",
-    "source": "MBWDB",
-    "notes": "British microbrand founded in 2016. Known for vintage-inspired diving watches and tool watches with Japanese and Swiss movements. Affordable price range, typically under $1,500."
   },
   {
     "brandName": "Nomadic",
@@ -7873,21 +7828,6 @@
     "instagramHandle": "serica_watches",
     "source": "existing-db",
     "notes": "Paris-based French independent, founded by Julien Tixier. Known for the 5303 diver and 8315 field watch. Swiss movements, strong French design identity. Visitability unconfirmed."
-  },
-  {
-    "brandName": "Serica Watches",
-    "country": "France",
-    "townCity": null,
-    "foundedYear": 2012,
-    "priceRangeLow": 400,
-    "priceRangeHigh": 800,
-    "status": "Active",
-    "latestModel": "Serica Field Watch",
-    "lastActivityDate": "2026-04-04",
-    "website": "https://serica-watches.com/en",
-    "instagramHandle": "serica_watches",
-    "source": "MBWDB",
-    "notes": "British microbrand founded in 2012. Known for vintage-inspired automatic watches with in-house dial design and quality Japanese movements. Affordable luxury positioning."
   },
   {
     "brandName": "Sewills",

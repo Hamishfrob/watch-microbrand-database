@@ -315,21 +315,6 @@
     "notes": "Canadian microbrand producing military-grade watches in limited quantities (9-14 pieces per color). Known for durability, precision, and exclusivity, with movements manufactured in Japan or Germany."
   },
   {
-    "brandName": "Bathys Hawaii",
-    "country": "United States",
-    "townCity": "Hawaii",
-    "foundedYear": 2012,
-    "priceRangeLow": 595,
-    "priceRangeHigh": 795,
-    "status": "Active",
-    "latestModel": "Makai",
-    "lastActivityDate": "2024-10-15",
-    "website": "https://www.bathyshawaii.com",
-    "instagramHandle": "bathyshawaii",
-    "source": "MBWDB",
-    "notes": "Hawaiian dive watch brand known for robust tool watches with vintage aesthetics. Founded with focus on professional-grade diving timepieces."
-  },
-  {
     "brandName": "Bathys Hawaii Watch Company",
     "country": "United States",
     "townCity": "Hawaii",
@@ -733,36 +718,6 @@
     "instagramHandle": "castorwatches",
     "source": "MBWDB",
     "notes": "Chilean watch brand specializing in wood and copper timepieces inspired by indigenous cultures including Diaguita, Mapuche, and Selknam heritage. Features collections like Ancestral, Ethnic, and Cities with over 20 original designs."
-  },
-  {
-    "brandName": "Chase Durer",
-    "country": "United States",
-    "townCity": null,
-    "foundedYear": null,
-    "priceRangeLow": 30,
-    "priceRangeHigh": null,
-    "status": "Active",
-    "latestModel": "UDT XL1000",
-    "lastActivityDate": "2022-06-06",
-    "website": "https://www.chasedurer.com",
-    "instagramHandle": null,
-    "source": "MBWDB",
-    "notes": "American watch brand known for military-style and pilot watches. Historical brand with heritage in aerospace and military timekeeping."
-  },
-  {
-    "brandName": "Chase-Durer",
-    "country": "United States",
-    "townCity": "Denver",
-    "foundedYear": 2009,
-    "priceRangeLow": 1200,
-    "priceRangeHigh": 2500,
-    "status": "Active",
-    "latestModel": "Flight Commander",
-    "lastActivityDate": null,
-    "website": "https://www.chasedurer.com",
-    "instagramHandle": "chasedurer",
-    "source": "MBWDB",
-    "notes": "American watch brand specializing in military-grade and professional watches. Known for chronographs and field watches."
   },
   {
     "brandName": "Chase-Durer Watch Company",
@@ -1813,21 +1768,6 @@
     "instagramHandle": "kingsburywatch",
     "source": "MBWDB",
     "notes": "Kingsbury Watch Co. is an independent watchmaker that creates timepieces inspired by both modern and vintage classics, positioned as a premium brand without the luxury markup."
-  },
-  {
-    "brandName": "KJoseph Watches",
-    "country": "United States",
-    "townCity": "Washington, D.C.",
-    "foundedYear": null,
-    "priceRangeLow": 35,
-    "priceRangeHigh": 150,
-    "status": "Active",
-    "latestModel": "Round Signature Shades",
-    "lastActivityDate": "2021-12-31",
-    "website": "https://www.kjosephwatches.com/",
-    "instagramHandle": "kjosephwatches",
-    "source": "MBWDB",
-    "notes": "Black-owned custom watch designer and maker based in Washington DC and Baltimore, Maryland. Known for clean lines and simplicity in design. Creates automatic watches including the Tonneau Style 'The Carter' model."
   },
   {
     "brandName": "Kobold Watch Company",
@@ -3855,21 +3795,6 @@
     "notes": "Independent mechanical wristwatch brand based in Greenwood, Indiana. Known for sketch-to-steel development and original design. Features models like the Duneshore with distinctive polished cases and high water resistance ratings."
   },
   {
-    "brandName": "Vortic",
-    "country": "United States",
-    "townCity": "Fort Collins",
-    "foundedYear": null,
-    "priceRangeLow": 4300,
-    "priceRangeHigh": 9500,
-    "status": "Active",
-    "latestModel": "Military Edition",
-    "lastActivityDate": "2025-12-19",
-    "website": "https://www.vorticwatch.com",
-    "instagramHandle": "vorticwatches",
-    "source": "MBWDB",
-    "notes": "American microbrand specializing in upcycled watches made from vintage railroad and other reclaimed materials, with emphasis on sustainability."
-  },
-  {
     "brandName": "Vortic Watch Company",
     "country": "United States",
     "townCity": "Fort Collins",
@@ -3898,21 +3823,6 @@
     "instagramHandle": "wayforthwatches",
     "source": "MBWDB",
     "notes": "Canadian independent microbrand known for travel-inspired watches combining vintage aesthetics with minimalist functional design. The Wayforth Voyager is a limited edition dual-time chronograph watch."
-  },
-  {
-    "brandName": "Weiss",
-    "country": "United States",
-    "townCity": "Nashville",
-    "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
-    "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
-    "website": "https://www.weisswatchcompany.com",
-    "instagramHandle": null,
-    "source": "MBWDB",
-    "notes": "American independent watchmaker producing field watches and tool watches with in-house movements. Known for tool-watch design and vintage military aesthetic."
   },
   {
     "brandName": "Weiss Watch Company",
