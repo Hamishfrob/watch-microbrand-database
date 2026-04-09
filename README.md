@@ -132,14 +132,27 @@ node scripts/discover-brands.js            # full run
 node scripts/discover-brands.js --dry-run  # preview only, no writes
 node scripts/discover-brands.js --limit 5  # cap AI calls for testing
 ```
-Scrapes 8 microbrand watch sites weekly to:
+Scrapes 9 microbrand watch sites weekly to:
 - **Discover new brands** not yet in the DB → written to `data/candidates.json` for review
 - **Refresh activity signals** for existing brands → updates `lastActivityDate`
 - **Flag Dormant/Defunct** brands that appear in reviews (for manual status review)
 
-Sites covered: Chronoscout (directory, zero AI), Mainspring, The Timebum, Balance & Bridge, Hype & Style, Kaminsky, Le Petit Poussoir, Chrononautix.
+Sites covered: Chronoscout (directory, zero AI), British Watchmakers (directory, zero AI), Mainspring, The Timebum, Balance & Bridge, Hype & Style, Kaminsky, Le Petit Poussoir, Chrononautix.
 
 Cost: ~$0.25/week. Candidates require manual review before promotion to regional files.
+
+#### Excluding clockmakers and non-watch brands
+
+`data/excluded.json` is a persistent exclusion list loaded at startup. Any name in this file is silently filtered from candidates — no code changes needed. Supports two formats:
+
+```json
+[
+  "Brand Name To Exclude",
+  { "name": "Clockmaker Name", "reason": "clockmaker — public clock restoration" }
+]
+```
+
+The file is pre-seeded with 16 entries from britishwatchmakers.com (clockmakers, a repair shop, a luxury atelier). To permanently exclude a future clockmaker or out-of-scope brand found during a sweep, add it to `data/excluded.json`.
 
 ### API keys required
 
@@ -164,7 +177,7 @@ Add to your `.env` file.
 | Script | Purpose |
 |--------|---------|
 | `build-spreadsheet.js` | Regenerate Excel from JSON files |
-| `discover-brands.js` | Weekly discovery: scrape 8 sites, find new brands + refresh activity dates |
+| `discover-brands.js` | Weekly discovery: scrape 9 sites, find new brands + refresh activity dates |
 | `re-enrich.js` | Quality enrichment: URL verification via Brave Search, shop page following, status assessment |
 | `check-websites.js` | Health-check all website URLs |
 | `find-websites.js` | Populate missing website URLs via Claude knowledge |
@@ -185,3 +198,4 @@ Add to your `.env` file.
 | 1.1 | 2026-04-02 | Enrichment pipeline added. 451 brands enriched across Europe / Americas / Asia-Pacific. |
 | 1.2 | 2026-04-04 | Weekly discovery script added (`discover-brands.js`). 1,241 brands. First discovery run: 229 activity dates refreshed, 125 candidates queued. |
 | 1.3 | 2026-04-09 | Location enrichment pipeline added (`find-locations-brave.js`). Deduplication pass. Full re-enrich + Brave location run on other.json: 179/318 brands now have country data. 1,237 brands total. |
+| 1.4 | 2026-04-09 | Added britishwatchmakers.com to discovery sweep. Persistent clockmaker exclusion list (`data/excluded.json`) — pre-seeded with 16 entries. Candidates promoted from other.json. 1,312 brands total (approx). |
