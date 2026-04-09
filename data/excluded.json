@@ -16,5 +16,6 @@
   { "name": "Thomas James",           "reason": "clockmaker — English clock company, contemporary designs for interiors" },
   { "name": "Time Traveller",         "reason": "clockmaker — recreates historic wooden clocks, bespoke designs" },
   { "name": "Tobias Birch",           "reason": "clockmaker/antique dealer — antique clocks, chronometers, restoration" },
-  { "name": "Horological Underground","reason": "repair shop — not a watch brand" }
+  { "name": "Horological Underground","reason": "repair shop — not a watch brand" },
+  { "name": "Wise",                   "reason": "retailer — wisewristwatches.com sells other brands, not a watch brand" }
 ]
