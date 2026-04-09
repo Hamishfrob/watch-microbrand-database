@@ -2,12 +2,12 @@
   {
     "brandName": "Adina",
     "country": "Australia",
-    "townCity": null,
+    "townCity": "Brisbane",
     "foundedYear": 2011,
     "priceRangeLow": 300,
     "priceRangeHigh": 600,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Automatic Amphibian GMT Dive Watch CT137",
     "lastActivityDate": null,
     "website": "https://adinatime.com",
     "instagramHandle": "adinawatch",
@@ -23,11 +23,11 @@
     "priceRangeHigh": 265,
     "status": "Active",
     "latestModel": "Horizon Voyager",
-    "lastActivityDate": "2024-12-19",
+    "lastActivityDate": "2026-04-04",
     "website": "https://aethelsohnwatch.com/",
     "instagramHandle": "aethelsohn",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Hong Kong-based microbrand focused on honest value, distinctive dials, and everyday durability. Known for clean, versatile timepieces positioned as premium quality without luxury markup. Recent models include the Blue Shard GADA watch and Horizon GMT."
   },
   {
     "brandName": "Agelocer",
@@ -38,7 +38,7 @@
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": "Volcano",
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://agelocer.com",
     "instagramHandle": "agelocer_official",
     "source": "MBWDB",
@@ -53,15 +53,15 @@
     "priceRangeHigh": 4203,
     "status": "Active",
     "latestModel": "Kakori 8 Down- Centenary Edition",
-    "lastActivityDate": "2026-03-27",
+    "lastActivityDate": "2026-04-04",
     "website": "https://ajwa.in/",
     "instagramHandle": "ajwainwatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "India's homegrown microbrand known for refined, minimalist designs and bespoke mechanical/automatic watches with limited production runs. Emphasizes craftsmanship and clean geometric architecture-influenced designs."
   },
   {
     "brandName": "Albedo",
-    "country": "Singapore",
+    "country": "Netherlands",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": null,
@@ -72,22 +72,22 @@
     "website": "https://www.albedowatches.com",
     "instagramHandle": "albedowatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Albedo Watches is a microbrand designed in The Netherlands, officially launched with their first timepiece, the Albedo 1901. The brand offers vintage-inspired timepieces with modern precision, featuring mechanical chronographs, automatic watches, quartz watches, and mecha-quartz movements."
   },
   {
     "brandName": "Alcadus",
-    "country": "Malaysia",
+    "country": "Singapore",
     "townCity": "Kuala Lumpur",
     "foundedYear": 2018,
     "priceRangeLow": 769,
     "priceRangeHigh": 897,
     "status": "Active",
     "latestModel": "Voyager Worldtimer GMT",
-    "lastActivityDate": "2024-01-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://alcadus.com/",
     "instagramHandle": "alcaduswatchco",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Singaporean microbrand known for artfully crafted, understated timepieces. Features models like the Dromo dive watch, Opus V2 dress watch, and Quantra with micro-rotor movements. Offers a 4-year Worry-Free Guarantee on mechanical movements."
   },
   {
     "brandName": "ApexRare",
@@ -97,17 +97,17 @@
     "priceRangeLow": 549,
     "priceRangeHigh": 6549,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Christopher Ward Bronze Trident C65 Homage",
     "lastActivityDate": "2024",
     "website": "https://apexvintagewatches.com/",
     "instagramHandle": "apexvintagewatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "ApexRare is a Chinese watch brand known for creating homage watches, including Christopher Ward C65 Diver and Alpinist homage models. The brand focuses on affordable watches while maintaining quality standards."
   },
   {
     "brandName": "Argos",
     "country": "Philippines",
-    "townCity": null,
+    "townCity": "Manila",
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
@@ -117,33 +117,33 @@
     "website": "https://argos-watches.com/",
     "instagramHandle": "argos.philippines",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "A 100% Filipino-owned watchmaking company based in Manila, Philippines. Specializes in mechanical timepieces and automatic watches designed for daily use. Known for premium packaging and luxury design aesthetics."
   },
   {
     "brandName": "Artego",
-    "country": "Thailand",
+    "country": "Hong Kong",
     "townCity": null,
     "foundedYear": 2010,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Blue Smurf 500m Diver",
     "lastActivityDate": "2024-01-01",
     "website": "https://www.watchreport.com/brands/artego/",
     "instagramHandle": "watchreport",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Artego is a relatively new watch company specializing in dive watches with retro styling. Known for producing divers with bright faces, easy-to-read hands, and water resistance ratings up to 500m, using automatic movements."
   },
   {
     "brandName": "Atelier Wen",
-    "country": "Singapore",
+    "country": "China",
     "townCity": "Singapore, Singapore",
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": "Inflection",
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.atelierwen.com",
     "instagramHandle": "atelierwenwatches",
     "source": "existing-db",
@@ -157,38 +157,38 @@
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Lamafa",
     "lastActivityDate": "2025-01-01",
     "website": "https://www.athayavintage.com",
     "instagramHandle": "athayavintage",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Athaya Vintage specializes in vintage watches and vintage watch parts, offering collections including classic diver watches and pilot watches. The brand operates through multiple channels including a main website, parts store, and online shop."
   },
   {
     "brandName": "Atowak",
     "country": "China",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 550,
+    "priceRangeHigh": 1199,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Ettore Drift",
     "lastActivityDate": null,
     "website": "https://www.atowak.com",
-    "instagramHandle": null,
+    "instagramHandle": "atowakwatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "ATOWAK is a luxury mechanical watch brand inspired by Caesar cipher design with award-winning iF and MUSE design recognition. Each model features exclusive, original movements crafted for mechanical watch enthusiasts seeking distinctive, one-of-a-kind timepieces."
   },
   {
     "brandName": "Awake Watches",
-    "country": "Australia",
+    "country": "France",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": null,
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://awakewatches.com.au",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -202,8 +202,8 @@
     "priceRangeLow": 400,
     "priceRangeHigh": 800,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Round-1 Squelette PVD",
+    "lastActivityDate": "2024-02-22",
     "website": "https://www.azimuth.hk",
     "instagramHandle": "azimuthwatches",
     "source": "MBWDB",
@@ -222,20 +222,20 @@
     "website": "https://www.baltany.com",
     "instagramHandle": "baltany_watches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Baltany is a Chinese watch brand specializing in affordable retro and vintage-style watches with mechanical and quartz movements, premium stainless steel construction, sapphire crystals, and homage designs. Compared favorably to San Martin in terms of quality."
   },
   {
     "brandName": "Bangalore Watch Company",
     "country": "India",
-    "townCity": null,
-    "foundedYear": null,
+    "townCity": "Bangalore",
+    "foundedYear": 2018,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Peninsula Professional",
+    "lastActivityDate": "2026-04-04",
     "website": "https://bangalorewatch.com",
-    "instagramHandle": null,
+    "instagramHandle": "bangalorewatchco",
     "source": "MBWDB",
     "notes": "Bangalore Watch Company is an Indian microbrand producing field watches and dress watches with a focus on craftsmanship."
   },
@@ -244,15 +244,15 @@
     "country": "China",
     "townCity": null,
     "foundedYear": 1995,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 71,
+    "priceRangeHigh": 140,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "BERNY-Men Automatic Compressor-style Diver Watch V3-AM339M",
     "lastActivityDate": null,
     "website": "https://www.bernywatch.com/",
     "instagramHandle": "berny.watch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "BERNY WATCH has been established since 1995, offering timeless luxury watches for both men and women. The brand features various movement types including automatic and quartz mechanisms, with designs ranging from diver watches to field watches and vintage-style pieces."
   },
   {
     "brandName": "Bewell",
@@ -267,7 +267,7 @@
     "website": "https://bewellna.com/",
     "instagramHandle": "bewellusa",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Bewell is an eco-friendly wooden watch brand selling all-natural and handmade wooden watches for men and women. Known for laser-engraved designs and Japanese quartz movement timepieces. Operates official US site and sells through major retailers including eBay, Etsy, Walmart, and Amazon."
   },
   {
     "brandName": "Blessington",
@@ -282,7 +282,7 @@
     "website": "https://blessington.co/",
     "instagramHandle": "blessington.watches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Australian watch brand based in Sydney that assembles most watches locally. The brand is shifting focus from quartz to primarily automatic watches and features limited collections inspired by Australian moments and landscapes."
   },
   {
     "brandName": "Bobo Bird",
@@ -292,7 +292,7 @@
     "priceRangeLow": 25,
     "priceRangeHigh": 120,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "S26-4",
     "lastActivityDate": null,
     "website": "https://www.bobobirdwatch.com",
     "instagramHandle": "bobobirdwatch",
@@ -308,37 +308,37 @@
     "priceRangeHigh": 479,
     "status": "Active",
     "latestModel": "Voyager Chronograph",
-    "lastActivityDate": "2024-01-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.boderry.com",
     "instagramHandle": "boderrywatch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Chinese-origin brand that provides premium quality watches at affordable prices. Offers automatic, mechanical, and quartz movements with styles including titanium, field, skeleton, and leather watches."
   },
   {
     "brandName": "Bonest Gatti",
-    "country": "China",
+    "country": "Germany",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "BG 8004",
     "lastActivityDate": null,
     "website": "https://www.bonestgatti.com",
-    "instagramHandle": null,
+    "instagramHandle": "bonest_gatti",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "German watch brand designed for men, known for automatic mechanical watches combining performance and elegance. Features automatic movements with details like sapphire crystals, zircon settings, and luminous dials."
   },
   {
     "brandName": "Burei",
     "country": "China",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 1993,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Burei Luxury Men's Automatic",
+    "lastActivityDate": "2025-01-01",
     "website": "https://bureiwatches.com/",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -357,12 +357,12 @@
     "website": "https://www.cakcity.com",
     "instagramHandle": "cakcitywatch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "CakCity produces digital sports watches with multifunction features including light, stopwatch, waterproof, shockproof, calendar, EL backlight, and alarm clock. The brand focuses on affordable sport watches suitable for everyday wear, outdoor work, and athletic activities."
   },
   {
     "brandName": "Carlson",
-    "country": "India",
-    "townCity": null,
+    "country": "United States",
+    "townCity": "California",
     "foundedYear": null,
     "priceRangeLow": 18,
     "priceRangeHigh": 30,
@@ -372,12 +372,12 @@
     "website": "https://carlsonraulen.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Carlson Instruments is a California-based watch brand focused on building serious dive watches incorporating rare materials such as hand forged stainless Damascus steel and mokume gane."
   },
   {
     "brandName": "Chronos",
-    "country": "China",
-    "townCity": null,
+    "country": "United States",
+    "townCity": "Bay Area",
     "foundedYear": null,
     "priceRangeLow": 49,
     "priceRangeHigh": 640,
@@ -387,7 +387,7 @@
     "website": "https://cronos.watch/",
     "instagramHandle": "cronoswatchstore",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Chronos is a Chinese microbrand offering quartz watches with leather straps and waterproof features at competitive prices. Products are available on Amazon and Reddit discussions indicate positive reception for value-to-quality ratio."
   },
   {
     "brandName": "CIGA Design",
@@ -397,8 +397,8 @@
     "priceRangeLow": 300,
     "priceRangeHigh": 600,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Series U Blue Planet",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.cigadesign.com",
     "instagramHandle": "cigadesign",
     "source": "existing-db",
@@ -408,16 +408,16 @@
     "brandName": "CKL Taiwan",
     "country": "Taiwan",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2019,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Model V",
+    "lastActivityDate": "2021-05-08",
     "website": "https://linkandtag.com/2025/10/18/ckl-watches/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Independent Taiwanese watchmaker CKL Taiwan founded by Liao Zhe-Kuan in 2019. Known for distinctive floating balance wheel designs using modified ETA/Seagull movements with extensive hand-finishing and traditional watchmaking techniques. Creates limited edition handcrafted pieces."
   },
   {
     "brandName": "Corgeut",
@@ -427,8 +427,8 @@
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Railmaster 3021A-2",
+    "lastActivityDate": "2024-01-01",
     "website": "https://corgeutwatchco.com/",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -442,7 +442,7 @@
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "2299",
     "lastActivityDate": null,
     "website": "https://crrju.com/",
     "instagramHandle": null,
@@ -462,7 +462,7 @@
     "website": "https://www.deguzmanandco.com/",
     "instagramHandle": "deguzmanandco",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Filipino watch microbrand dedicated to bringing value proposition timepieces inspired by classic icons. Created and dedicated to innovation and value-proposition. Physical locations at Unbox GH, Promenade Mall and The Rockwellist, Rockwell Power Plant."
   },
   {
     "brandName": "Duzu Watches",
@@ -473,22 +473,22 @@
     "priceRangeHigh": 549,
     "status": "Active",
     "latestModel": "DW-D3",
-    "lastActivityDate": "2026-01-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.duzuwatches.com/",
     "instagramHandle": "duzu_watches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "A proudly Western Australian watch design studio creating affordable tool watches for the Urban Warrior. Known for dive watches and pilot models suitable for both boardroom and wilderness use."
   },
   {
     "brandName": "Earthen Co",
-    "country": "China",
+    "country": "Hong Kong",
     "townCity": "Hong Kong, China",
     "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 899,
+    "priceRangeHigh": 899,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Summit Collection",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.earthenco.com",
     "instagramHandle": null,
     "source": "existing-db",
@@ -507,7 +507,7 @@
     "website": "https://expwatch.com/",
     "instagramHandle": "expeditiontimepieceid",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "EXP watches are professional timing equipment engineered for harsh outdoor environments. The brand appears to have multiple entities including Olmsted ExP-01 experimental series and Expedition Timepiece."
   },
   {
     "brandName": "Fanzhi",
@@ -522,7 +522,7 @@
     "website": "https://www.merkurwatch.com/Fanzhi-rc122761.html",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Fanzhi (凡致) is a Chinese watch brand under Merkur with a vision of creating \"gorgeous watches for ordinary people.\" The brand focuses on affordable mechanical watches with good design and dependable movements, including models featuring flying tourbillons and vintage-inspired designs."
   },
   {
     "brandName": "Fifty-Four",
@@ -537,7 +537,7 @@
     "website": "https://www.fiftyfourwatch.com/",
     "instagramHandle": "54watch.com_legnedwatch.cn",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Fifty-Four is a watch manufacturer under the LEGEND brand that started operations in 1992 and is based in South China. The company specializes in watch production with over 300 employees and is one of the leaders in the region. Known for models like the 62MAS and MM300, featuring 316L stainless steel cases and NH35 movements."
   },
   {
     "brandName": "FOD",
@@ -552,12 +552,12 @@
     "website": "https://www.merkurwatch.com/FOD-b27968.html",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "FOD is a watch brand featuring mechanical chronographs with hand-wound Seagull ST1901 movements. Known for vintage 70s-style designs with military aesthetics, offered under $200 price point."
   },
   {
     "brandName": "Fukushima Watch Co.",
     "country": "Japan",
-    "townCity": null,
+    "townCity": "Minami-Soma",
     "foundedYear": null,
     "priceRangeLow": 348,
     "priceRangeHigh": 348,
@@ -567,13 +567,13 @@
     "website": "https://shop.fukushima-watch.com/en",
     "instagramHandle": "fukushima_watch.co",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Japanese microbrand based in Minami-Soma, Fukushima Prefecture. Aims to create daily-wear watches inspired by different aspects of the city, similar to Grand Seiko on a micro brand scale. Employs mostly local workers."
   },
   {
     "brandName": "Galvin Watch Company",
     "country": "Australia",
     "townCity": "Sydney",
-    "foundedYear": null,
+    "foundedYear": 2020,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
@@ -582,13 +582,13 @@
     "website": "https://galvinwatchcompany.com.au/",
     "instagramHandle": "galvinwatchcompany",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Galvin Watch Company is a family-owned Australian microbrand founded in March 2020 by Finnish watchmaker Susan Galvin. Known for automatic luxury watches with classic designs and unique case shapes, including the Alku and Loimu collections inspired by the aurora borealis."
   },
   {
     "brandName": "Gavox",
-    "country": "Singapore",
+    "country": "Belgium",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2011,
     "priceRangeLow": 275,
     "priceRangeHigh": 2190,
     "status": "Active",
@@ -602,7 +602,7 @@
   {
     "brandName": "Geylang Watch Co",
     "country": "Singapore",
-    "townCity": null,
+    "townCity": "Geylang",
     "foundedYear": null,
     "priceRangeLow": 342,
     "priceRangeHigh": 608,
@@ -610,15 +610,15 @@
     "latestModel": "APEX - Hybrid Chronograph",
     "lastActivityDate": "2024-12-19",
     "website": "https://geylangwatchco.store/",
-    "instagramHandle": null,
+    "instagramHandle": "geylangwatchco",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Singapore-based microbrand specializing in mechanical watches with playful design and cultural inspiration. Collections pay homage to the Lorongs of Geylang with hand-assembled timepieces in black steel or carbonised cases featuring vibrant straps and dials."
   },
   {
     "brandName": "Gorilla Watches",
-    "country": "Hong Kong",
-    "townCity": null,
-    "foundedYear": null,
+    "country": "Switzerland",
+    "townCity": "Neuchâtel",
+    "foundedYear": 2016,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
@@ -627,7 +627,7 @@
     "website": "https://www.gorillawatches.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Swiss family-owned watch brand founded in 2016 by Octavio Garcia, former Artistic Director of Audemars Piguet. Known for avant-garde design, cutting-edge engineering, and bold material combinations with sporty automotive-inspired aesthetics."
   },
   {
     "brandName": "Guanqin",
@@ -653,11 +653,11 @@
     "priceRangeHigh": 690,
     "status": "Active",
     "latestModel": "Broadway 40",
-    "lastActivityDate": "2026-01-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.havaantuvali.com/",
     "instagramHandle": "havaantuvali",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "One-man atelier based in Tainan, Taiwan that creates watches using NOS (new old stock) vintage cases and movements from the 1970s and earlier. Known for repurposing unused vintage components with creative dial designs."
   },
   {
     "brandName": "Heimdallr",
@@ -679,21 +679,21 @@
     "country": "Japan",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 760,
+    "priceRangeHigh": 760,
     "status": "Active",
     "latestModel": "Nexus Tokiiro no Hitori",
     "lastActivityDate": "2024-01-01",
     "website": "https://www.hitoriwatches.com/",
     "instagramHandle": "hitoriwatchco",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Independent watch brand inspired by Japanese culture and craftsmanship. Offers value-driven timepieces combining premium materials with sophisticated workmanship. Uses Japanese automatic movements such as Caliber NH36A."
   },
   {
     "brandName": "HKED",
     "country": "Hong Kong",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2017,
     "priceRangeLow": 305,
     "priceRangeHigh": 335,
     "status": "Active",
@@ -702,7 +702,7 @@
     "website": "https://www.hkedwatches.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "HKED watches were created in 2017 by a forum user named Ed from Hong Kong in collaboration with Thomas at Red Star watch factory. The brand is known for homage watches, particularly chronograph designs inspired by the Seagull 1963, offered with acrylic or sapphire crystal variants."
   },
   {
     "brandName": "HMT",
@@ -728,16 +728,16 @@
     "priceRangeHigh": 640,
     "status": "Active",
     "latestModel": "Pilbara Rock Dive Watch - Second Release",
-    "lastActivityDate": "2024-12-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://houtmanwatch.com/",
     "instagramHandle": "houtman_watch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Australian watch brand designed and influenced by Western Australia. Produces high-quality men's wristwatches including dive watches, field watches, and automatic mechanical timepieces."
   },
   {
     "brandName": "Huizen Watches",
     "country": "Australia",
-    "townCity": null,
+    "townCity": "Sydney",
     "foundedYear": null,
     "priceRangeLow": 148,
     "priceRangeHigh": 591,
@@ -747,7 +747,7 @@
     "website": "https://huizenwatches.com/",
     "instagramHandle": "huizenwatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Australian, German, and Dutch microbrand hand-built in Sydney. Known for dress watches with high gloss enamel dials and polished case elements. Uses NH35 movements in their watches."
   },
   {
     "brandName": "Hyakuichi 101",
@@ -762,7 +762,7 @@
     "website": "https://info-as.wixsite.com/hyakuichi",
     "instagramHandle": "hyakuichi.watch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Kyoto-based micro brand producing automatic and quartz dive watches. Started with Rolex Submariner homages, now features original designs with watch sizes typically over 40mm. Made in Japan."
   },
   {
     "brandName": "Hz Watches",
@@ -777,7 +777,7 @@
     "website": "https://hzwatches.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Hz Watches was founded with the philosophy that everyday watches should be simple, accurate, and dependable. The brand produces quartz and chronograph models in titanium cases, including the flagship HZ.01, the HZ.02 Chronograph, and the HZ.03 Blue Marble dress watch."
   },
   {
     "brandName": "Ibarra",
@@ -792,17 +792,17 @@
     "website": "https://ibarra.ph/",
     "instagramHandle": "ibarrawatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Filipino watch brand founded in 2014 that crafts classic timepieces with sophisticated style and elegance. Official timepiece for ASEAN50 and 30th SEA Games. Proudly made in the Philippines."
   },
   {
     "brandName": "Infantry",
     "country": "China",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
+    "priceRangeLow": 13,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "INP-TF-03",
     "lastActivityDate": null,
     "website": "https://www.infantrywatch.com",
     "instagramHandle": null,
@@ -812,12 +812,12 @@
   {
     "brandName": "Jaipur Watch Co.",
     "country": "India",
-    "townCity": null,
+    "townCity": "Jaipur",
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Roman Baagh Steel",
     "lastActivityDate": null,
     "website": "https://jaipur.watch/en-us",
     "instagramHandle": null,
@@ -837,7 +837,7 @@
     "website": "https://jwwatches.com/",
     "instagramHandle": "jwwatches_official",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "JW Watch is a watch company focused on providing valuable timepieces with excellent craftsmanship. The brand emphasizes both quality design and social values including gender equality and racial harmony."
   },
   {
     "brandName": "JW-EX",
@@ -852,7 +852,7 @@
     "website": "https://jwwatches.com/",
     "instagramHandle": "jwwatches_official",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "JW-EX is a mechanical designer watch by Jason Chan featuring a unique in-house movement with zero premade parts and 80 hours of power reserve. The brand has 11 years of watch design experience and offers both Kickstarter and retail sales through Jason Watch Shop."
   },
   {
     "brandName": "Kentex",
@@ -872,13 +872,13 @@
   {
     "brandName": "Kiwame Tokyo",
     "country": "Japan",
-    "townCity": null,
-    "foundedYear": null,
+    "townCity": "Asakusa",
+    "foundedYear": 2025,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "MUNE Series",
+    "lastActivityDate": "2026-04-04",
     "website": "https://kiwametokyo.com/en/collections/watches",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -892,40 +892,40 @@
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "CC-39",
     "lastActivityDate": null,
     "website": "https://www.knotconcepts.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Maker's Watch Knot is a Japan-made watch brand known for customizable 'mix and match' straps using traditional Japanese crafts and materials. The brand operates 12 directly-owned shops across Japan and specializes in lacquer dials paired with unique Japanese fabrics and leathers."
   },
   {
     "brandName": "Kuoe",
     "country": "Japan",
-    "townCity": null,
-    "foundedYear": null,
+    "townCity": "Kyoto",
+    "foundedYear": 2020,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": null,
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.kuoe-en.com/",
-    "instagramHandle": null,
+    "instagramHandle": "kuoe_official",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Japanese microbrand established in Kyoto in 2020. Specializes in vintage-inspired watches with contemporary design. All watches are hand-assembled in their Kyoto workshop."
   },
   {
     "brandName": "Kurono Tokyo",
     "country": "Japan",
     "townCity": "Tokyo",
-    "foundedYear": null,
+    "foundedYear": 2017,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": "2026 Kurono Diver's",
     "lastActivityDate": "2026-01-01",
     "website": "https://www.kuronotokyo.com",
-    "instagramHandle": null,
+    "instagramHandle": "kuronotokyo",
     "source": "existing-db",
     "notes": "Kurono Tokyo is the accessible brand of independent watchmaker Hajime Asaoka, based in Tokyo. Known for elegant, minimalist dial design with Japanese aesthetic sensibility. Movement assembly and casing carried out in Tokyo. Extremely limited production — releases sell out within seconds online. No atelier visits."
   },
@@ -933,16 +933,16 @@
     "brandName": "Lima Watch",
     "country": "Indonesia",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2014,
     "priceRangeLow": 290,
     "priceRangeHigh": 347,
     "status": "Active",
     "latestModel": "Kronosprinter",
-    "lastActivityDate": "2026-01-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://us.limawatch.com/",
-    "instagramHandle": null,
+    "instagramHandle": "limawatch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Indonesian watch brand founded in 2014 by a designer who previously worked in advertising and design. Known for affordable, creatively designed watches with customizable configurations and timeless aesthetics."
   },
   {
     "brandName": "Lytt Labs",
@@ -957,18 +957,18 @@
     "website": "https://lyttlabs.com/",
     "instagramHandle": "lyttlabs",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Lytt Labs is a watch brand focused on quality, design and technical innovation. Known for the Inception watch collection featuring unique dial designs with luminescent paint and sci-fi aesthetics. All watches come with a 2-year international warranty."
   },
   {
     "brandName": "Magrette",
-    "country": "Singapore",
-    "townCity": null,
+    "country": "New Zealand",
+    "townCity": "Auckland",
     "foundedYear": null,
     "priceRangeLow": 65,
     "priceRangeHigh": 5850,
     "status": "Active",
     "latestModel": "Moana",
-    "lastActivityDate": "2024-05-10",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.magrette.com",
     "instagramHandle": "magrette_timepieces",
     "source": "MBWDB",
@@ -987,27 +987,27 @@
     "website": "https://www.worldwidewatch.shop/product/maiale-brava-gente-submaruynae-300m-titanium-limited-46-110-auto-date-size-40-mm-world-wide-watch-shop/",
     "instagramHandle": "worldwidewatch.shop",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Thailand microbrand producing full titanium diver watches. ECO 1000 model features 48mm diameter, 9015 Miyota movement, rated to 1000m, limited to 100 pieces and sold out."
   },
   {
     "brandName": "Maison Celadon Watches",
     "country": "China",
     "townCity": null,
     "foundedYear": 2012,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 1000,
+    "priceRangeHigh": 30000,
     "status": "Active",
     "latestModel": "Imperial",
     "lastActivityDate": null,
     "website": "https://celadonhh.com/",
     "instagramHandle": "celadon.horology",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Chinese luxury microbrand founded by Benjamin Chee HH. Known for dial artistry including Heritage Guilloché, Suzhou Silk Embroidery, and Cloisonné Enamel dials. Operates under philosophy of 'Made in China with Pride' across three collections: Celadon Imperial, Celadon Claire de Lune, and Celadon Haute Horlogerie."
   },
   {
     "brandName": "Majestic Craftsmen",
     "country": "India",
-    "townCity": null,
+    "townCity": "Bangalore",
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
@@ -1017,7 +1017,7 @@
     "website": "https://majesticcraftsmen.com/",
     "instagramHandle": "majesticcraftsmen",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Indian watch brand focused on generational craftsmanship blended with modern horology. Known for purposeful design and exploration of HMT heritage. Produces 38mm automatic watches with bold, resilient aesthetics."
   },
   {
     "brandName": "Maranez",
@@ -1032,7 +1032,7 @@
     "website": "https://www.maranez.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Maranez is a vintage-inspired diver watch brand with a tribute to early Italian dive watch design. Watches feature clean dials, scratch-proof sapphire crystals, and are built for outdoor activities."
   },
   {
     "brandName": "Marshall",
@@ -1045,9 +1045,9 @@
     "latestModel": "LADIES' CLASSIC - 203252",
     "lastActivityDate": "2026-01-01",
     "website": "https://www.marshalwatch.com/",
-    "instagramHandle": null,
+    "instagramHandle": "wristwatch_revival",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Marshall Sutcliffe is a watch restorer and content creator who specializes in restoring vintage watches through his YouTube channel Wristwatch Revival and social media presence."
   },
   {
     "brandName": "Matthew and Son (MAS) Watches",
@@ -1062,7 +1062,7 @@
     "website": "https://www.maswatch.com/",
     "instagramHandle": "maswatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Matthew and Son (MAS) Watches was founded in 2019 by Matthew Francis, a watch enthusiast who shares his passion for watches with his young son, Tate. The brand is classified as a microbrand."
   },
   {
     "brandName": "Mayonnaise",
@@ -1082,12 +1082,12 @@
   {
     "brandName": "Melbourne Watch Co.",
     "country": "Australia",
-    "townCity": null,
-    "foundedYear": null,
-    "priceRangeLow": null,
+    "townCity": "Melbourne",
+    "foundedYear": 2013,
+    "priceRangeLow": 600,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Collins",
     "lastActivityDate": null,
     "website": "https://www.melbournewatchco.com",
     "instagramHandle": null,
@@ -1097,13 +1097,13 @@
   {
     "brandName": "Melbourne Watch Company",
     "country": "Australia",
-    "townCity": null,
-    "foundedYear": null,
+    "townCity": "Melbourne",
+    "foundedYear": 2013,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": null,
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.melbournewatchco.com",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -1144,11 +1144,11 @@
     "country": "Malaysia",
     "townCity": "Kuala Lumpur, Malaysia",
     "foundedYear": 2017,
-    "priceRangeLow": null,
+    "priceRangeLow": 1500,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": "37.09 Bluefin",
-    "lastActivityDate": "2024-12-31",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.ming.watch",
     "instagramHandle": "mingwatches",
     "source": "existing-db",
@@ -1158,7 +1158,7 @@
     "brandName": "Mini Focus",
     "country": "China",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2020,
     "priceRangeLow": 49,
     "priceRangeHigh": 69,
     "status": "Active",
@@ -1167,7 +1167,7 @@
     "website": "https://www.mini-focus.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Mini Focus is a watch brand offering quartz and automatic mechanical watches with various styles including chronographs and luxury fashion designs. Products are available through their official website, eBay, Walmart, and Amazon, featuring waterproof cases and silicon or stainless steel bands."
   },
   {
     "brandName": "MMI Watches",
@@ -1182,22 +1182,22 @@
     "website": "https://www.mmiwatches.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Independent Singapore-based watch company. MMI stands for Modernization, Modification and Innovation, representing their design philosophy. Known for collaborations featuring traditional craftsmanship like Washi dials in contemporary designs."
   },
   {
     "brandName": "Movement in Motion",
     "country": "Japan",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 235,
+    "priceRangeHigh": 235,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Retrograde",
     "lastActivityDate": null,
     "website": "https://miyotamovement.com/",
     "instagramHandle": "miyotamovement",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Movement in Motion is a designer watch brand developed by Japan micro-brand TiCTAC. The brand produces both automatic and quartz watches, including models like the Dual Time Retrograde Travel series from 2020. Watches are made in Japan and feature specifications such as open heart automatic movements and stainless steel cases."
   },
   {
     "brandName": "Naval Watch Co.",
@@ -1212,33 +1212,33 @@
     "website": "https://www.navalwatches.com",
     "instagramHandle": "navalwatch_jp",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Naval Watch Co. has roots dating back to 1800s Switzerland and pioneered luminous painted dials in military timepieces. Now operates out of Japan, collaborating with design firm LOWERCASE to produce military-inspired watches."
   },
   {
     "brandName": "Naviforce",
     "country": "China",
-    "townCity": null,
+    "townCity": "Guangzhou",
     "foundedYear": 2013,
     "priceRangeLow": 25,
     "priceRangeHigh": 150,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "NF9182",
     "lastActivityDate": null,
     "website": "https://www.naviforce.com",
     "instagramHandle": "naviforce_official",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Guangzhou NAVIFORCE Watch Co., Ltd. was established in 2012 and provides OEM/ODM watch manufacturing services. The brand specializes in men's digital sports watches, military-style chronographs, and quartz waterproof wristwatches with multifunctional features."
   },
   {
     "brandName": "Nezumi Studios",
-    "country": "Japan",
-    "townCity": null,
+    "country": "Sweden",
+    "townCity": "Stockholm",
     "foundedYear": 2011,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": "BALEINE – 202",
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.nezumistudios.com",
     "instagramHandle": "NezumiStudios",
     "source": "MBWDB",
@@ -1247,17 +1247,17 @@
   {
     "brandName": "Ocean to Orbit",
     "country": "Australia",
-    "townCity": "Sydney",
+    "townCity": "Melbourne",
     "foundedYear": 2020,
     "priceRangeLow": 795,
     "priceRangeHigh": 795,
     "status": "Active",
     "latestModel": "Himalayan Project",
-    "lastActivityDate": "2024-04-15",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.oceantoorbit.com/",
     "instagramHandle": "ocean_to_orbit_watches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Swiss-made watch brand designed and developed in Melbourne, Australia. Known for watches designed to be worn in the ocean, taken into space, and used anywhere in between. The brand applies car design principles to watchmaking."
   },
   {
     "brandName": "One Eleven",
@@ -1270,9 +1270,9 @@
     "latestModel": "44M2",
     "lastActivityDate": null,
     "website": "https://www.watcheseleven.com/",
-    "instagramHandle": null,
+    "instagramHandle": "111watches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "One Eleven produces solar-powered tool watches made from recycled materials. The brand focuses on lightweight, durable, and affordable timepieces designed for adventure and outdoor use. They are a 1% for the Planet Partner."
   },
   {
     "brandName": "Outcast Watch",
@@ -1287,20 +1287,20 @@
     "website": "https://outcastwatch.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Outcast Watch is founded by Rob Valli and produces luxury automatic mechanical watches with customizable dial and parts combinations. The brand emphasizes quality and reliability."
   },
   {
     "brandName": "Panzera",
-    "country": "South Korea",
+    "country": "Australia",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
+    "priceRangeLow": 300,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Aquamarine",
     "lastActivityDate": null,
     "website": "https://www.panzera.com",
-    "instagramHandle": null,
+    "instagramHandle": "panzera.watches",
     "source": "MBWDB",
     "notes": "A South Korean microbrand known for affordable automatic watches and homage designs with good build quality."
   },
@@ -1309,7 +1309,7 @@
     "country": "Hong Kong",
     "townCity": "Hong Kong",
     "foundedYear": 2004,
-    "priceRangeLow": null,
+    "priceRangeLow": 200,
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": null,
@@ -1317,7 +1317,7 @@
     "website": "https://www.perpetual-watch.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "PerpetuaL Watch Company was established in 2004 and is based in Hong Kong. They produce only 20 watches per month, with all assembly and quality checks performed in-house at their own workshop."
   },
   {
     "brandName": "Phoibos",
@@ -1328,7 +1328,7 @@
     "priceRangeHigh": 565,
     "status": "Active",
     "latestModel": "Storm Corsair",
-    "lastActivityDate": "2024-04-06",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.phoiboswatch.com",
     "instagramHandle": "phoiboswatches",
     "source": "MBWDB",
@@ -1337,12 +1337,12 @@
   {
     "brandName": "Pitzmann Seoul",
     "country": "South Korea",
-    "townCity": null,
+    "townCity": "Seoul",
     "foundedYear": null,
-    "priceRangeLow": null,
+    "priceRangeLow": 875,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Pitzmann II",
     "lastActivityDate": null,
     "website": "https://www.pitzmann.com/",
     "instagramHandle": null,
@@ -1362,7 +1362,7 @@
     "website": "https://pk-watches.com/",
     "instagramHandle": "pengkweewatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "PJK makes a range of luxury sports watches that are handmade by skilled craftspeople."
   },
   {
     "brandName": "Raja",
@@ -1377,13 +1377,13 @@
     "website": "https://www.rajawatch.com/",
     "instagramHandle": "therajawatch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Multiple watch brands use the Raja name across different countries. Raja Watch Co. is a Filipino brand inspired by Eastern horology and dive watches from the Celebes and Andaman Seas. Pook Watches (Finland) produces the Pook Raja, a retro diving watch with 1970s design elements."
   },
   {
     "brandName": "Ratio Watches",
     "country": "Hong Kong",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2017,
     "priceRangeLow": 87,
     "priceRangeHigh": 495,
     "status": "Active",
@@ -1392,13 +1392,13 @@
     "website": "https://www.ratiowatches.com",
     "instagramHandle": "ratiowatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Ratio Watches was designed in Italy and conceived in Singapore, founded in 2017. They specialize in men's and women's dive watches integrated with Seiko or Citizen Miyota movements, chosen by divers and adventurers globally."
   },
   {
     "brandName": "Rdunae",
     "country": "China",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2019,
     "priceRangeLow": 29,
     "priceRangeHigh": 189,
     "status": "Active",
@@ -1407,7 +1407,7 @@
     "website": "https://www.rdunae.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Rdunae was established in 2019 by Feng, who integrated 17 years of diverse industry experience into watch design and manufacturing. The brand specializes in field watches and dive watches, handling every aspect from CAD design to manufacturing and quality control in-house."
   },
   {
     "brandName": "RED BALLOON",
@@ -1417,31 +1417,31 @@
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Time Teacher",
     "lastActivityDate": null,
     "website": "https://www.redballoonwatch.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Red Balloon is a children's watch brand specializing in time-teaching analog watches. The brand markets educational timepieces designed to help kids learn how to tell time, with models featuring adjustable straps and stainless steel construction."
   },
   {
     "brandName": "Regia",
     "country": "Singapore",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
-    "priceRangeHigh": null,
+    "priceRangeLow": 420,
+    "priceRangeHigh": 1000,
     "status": "Active",
     "latestModel": "Regia Diver Grey Sunburst Angry Eye Edition",
     "lastActivityDate": "2024-01-01",
     "website": "https://regia-timepieces.com/",
     "instagramHandle": "regia.timepieces",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Regia Timepieces offers custom-painted watches inspired by the Sarmizegetusa Regia Calendar. Known for collaborations with artists like Sylvia Chow and Timothy John, featuring unique dial designs including floral and skull motifs."
   },
   {
     "brandName": "Relax",
-    "country": "Japan",
+    "country": "United States",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": 129,
@@ -1452,7 +1452,7 @@
     "website": "https://relaxwatchesvip.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Relax is an American parody watch brand by Atelier Perpetuel that creates custom-made concept watches featuring high-quality Seiko movements. Known for satirical takes on famous watch designs like Rolex, with intentional design flaws such as broken crowns on dials."
   },
   {
     "brandName": "Reverie",
@@ -1467,22 +1467,22 @@
     "website": "https://www.reveriewatches.com",
     "instagramHandle": "reveriewatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Singapore-based independent watch microbrand established in 2014. Specializes in limited edition mechanical watches with ornate guilloché dials as their design signature."
   },
   {
     "brandName": "Roue",
-    "country": "Singapore",
+    "country": "Hong Kong",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "TPS7",
     "lastActivityDate": null,
     "website": "https://www.rouewatches.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Hong Kong-based independent watch manufacturer combining quartz movements with vintage-inspired designs featuring automotive styling. Known for offering quality watches at budget-friendly prices, targeting those unwilling to spend thousands on timepieces."
   },
   {
     "brandName": "RZE (Reise Watches)",
@@ -1502,22 +1502,22 @@
   {
     "brandName": "Second Hour",
     "country": "Australia",
-    "townCity": "Sunshine, Victoria",
-    "foundedYear": null,
+    "townCity": "Melbourne",
+    "foundedYear": 2019,
     "priceRangeLow": 350,
     "priceRangeHigh": 840,
     "status": "Active",
     "latestModel": "The Fusion",
-    "lastActivityDate": "2024-01-01",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.secondhour.com.au",
     "instagramHandle": "secondhourwatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Australian microbrand founded in 2019 by Peter Sargison and his wife, Akira. Family-owned designer and manufacturer featuring fully in-house designed watches with Swiss and Japanese movements and proprietary hi-tech surface hardening treatment."
   },
   {
     "brandName": "Stewart Dawson",
-    "country": "New Zealand",
-    "townCity": null,
+    "country": "United Kingdom",
+    "townCity": "London",
     "foundedYear": 1871,
     "priceRangeLow": 1595,
     "priceRangeHigh": 1665,
@@ -1527,7 +1527,7 @@
     "website": "https://stewartdawson.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Stewart Dawson London is a label of the D Group founded in 2005, reinterpreted in 2015. The brand creates Italian-inspired, high-quality Swiss-made watches with British heritage and style, including pilot-themed models."
   },
   {
     "brandName": "Sugess Watch",
@@ -1557,13 +1557,13 @@
     "website": "https://www.sunwa.co.jp/en/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Sunwa is registered in the Microbrand Watches database. The brand operates a website at sunwaus.com and appears to be active in the watch market."
   },
   {
     "brandName": "Tactical Frog",
     "country": "China",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2020,
     "priceRangeLow": 5,
     "priceRangeHigh": 189,
     "status": "Active",
@@ -1572,7 +1572,7 @@
     "website": "https://tacticalfrogwatch.com/",
     "instagramHandle": "tacticalfrogwatch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Tactical Frog is a rising watch brand that produces classic watches faithful to original design aesthetics. The brand offers a range of movements including solar chronograph, automatic, quartz, and diver watches with features like sapphire crystals, water resistance up to 200m, and various case materials including titanium and stainless steel."
   },
   {
     "brandName": "Takehiko Kuroki",
@@ -1594,15 +1594,15 @@
     "country": "China",
     "townCity": null,
     "foundedYear": null,
-    "priceRangeLow": null,
+    "priceRangeLow": 85,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "TD114",
     "lastActivityDate": null,
     "website": "https://www.tandorio.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Tandorio is a direct-to-customer (DTC) Chinese watch company that designs and produces automatic, hand-winding, and quartz watches with Seiko and Miyota movements. The brand ships from Hong Kong and offers customization options."
   },
   {
     "brandName": "Tisell",
@@ -1612,7 +1612,7 @@
     "priceRangeLow": 300,
     "priceRangeHigh": 600,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "SUB Subby Diver Green Date",
     "lastActivityDate": null,
     "website": "https://www.tisellkr.com",
     "instagramHandle": "tisellwatch",
@@ -1647,7 +1647,7 @@
     "website": "https://www.tmdindustries.com/",
     "instagramHandle": "tmdindustries",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Micro brand startup based in Hong Kong. The owner is both a watchmaker and leather craftsman, creating watches with included straps and bracelets."
   },
   {
     "brandName": "TSAR BOMBA",
@@ -1658,26 +1658,26 @@
     "priceRangeHigh": 4870,
     "status": "Active",
     "latestModel": "Dark Matter-Rafael Márquez Collaboration Limited Edition",
-    "lastActivityDate": null,
+    "lastActivityDate": "2023-01-01",
     "website": "https://www.tsarbombawatch.com",
     "instagramHandle": "tsarbomba_watch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "TSAR BOMBA is a world-class luxury watchmaker trusted across 186+ countries and endorsed by footballer Rafael Márquez. The brand is known for automatic, quartz, and carbon fiber watches with innovative and futuristic design that fuses atomic engineering with horology."
   },
   {
     "brandName": "TWCO",
-    "country": "Australia",
+    "country": "Netherlands",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2012,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Lumecore Chronograph",
     "lastActivityDate": null,
     "website": "https://www.twco.com.au",
-    "instagramHandle": null,
+    "instagramHandle": "twcowatches",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Dutch watch brand founded in 2012 by Robbert Suurland, specializing in high-quality professional and technical watches including Diver and Pilot models. The brand designed a limited edition for Spanish sea rescue service but appears to have ceased active production."
   },
   {
     "brandName": "Vario",
@@ -1688,16 +1688,16 @@
     "priceRangeHigh": null,
     "status": "Active",
     "latestModel": "1918 Trench & Medic",
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.vario.sg",
     "instagramHandle": "varioeveryday",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Singapore-based online watch store offering a diverse range from classic dress watches to rugged field watches. Brand focuses on variation and balance between sophistication, quality, and fun."
   },
   {
     "brandName": "Waktu Horology",
     "country": "Singapore",
-    "townCity": null,
+    "townCity": "Singapore",
     "foundedYear": null,
     "priceRangeLow": 403,
     "priceRangeHigh": 411,
@@ -1705,20 +1705,20 @@
     "latestModel": "Kalbu: M.O.P.",
     "lastActivityDate": "2026-01-24",
     "website": "https://waktuhorology.com/",
-    "instagramHandle": null,
+    "instagramHandle": "waktuhorology",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Singapore's first Malay watch brand dedicated to honouring and showcasing Malay heritage and cultural identity through horology."
   },
   {
     "brandName": "Wancher",
     "country": "Japan",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2021,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Special Color Dream Moonphase Kaguya",
+    "lastActivityDate": "2026-04-04",
     "website": "https://wancherwatch.com/",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -1728,7 +1728,7 @@
     "brandName": "WatchDives",
     "country": "Vietnam",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2019,
     "priceRangeLow": 69,
     "priceRangeHigh": 579,
     "status": "Active",
@@ -1743,7 +1743,7 @@
     "brandName": "Winner",
     "country": "China",
     "townCity": null,
-    "foundedYear": null,
+    "foundedYear": 2017,
     "priceRangeLow": 31,
     "priceRangeHigh": 359,
     "status": "Active",
@@ -1752,7 +1752,7 @@
     "website": "https://winner-watch.com/",
     "instagramHandle": "winner-watch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Winner is a mechanical watch brand founded in 2017. The brand specializes in automatic and manual mechanical watches with skeleton dials and stainless steel cases, available in luxury and casual styles."
   },
   {
     "brandName": "Wise Timepiece",
@@ -1767,18 +1767,18 @@
     "website": "https://wisetimepiece.com/",
     "instagramHandle": "wisethailandwatch",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Thai watch brand known for contemporary design combined with rich cultural craftsmanship. Produces diver watches like the Hitman model with customization options. Operates as a micro brand with multiple model series including the AD8 Damascus collection."
   },
   {
     "brandName": "Xushu Ma",
     "country": "China",
-    "townCity": "Beijing, China",
+    "townCity": "Beijing",
     "foundedYear": 2005,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Transversal cylindrical movement with lateral tourbillon",
+    "lastActivityDate": "2014-01-01",
     "website": "https://www.ahci.ch/members/xushu-ma",
     "instagramHandle": "ahci_updates",
     "source": "existing-db",
@@ -1787,8 +1787,8 @@
   {
     "brandName": "Yazole",
     "country": "China",
-    "townCity": null,
-    "foundedYear": null,
+    "townCity": "Shantou",
+    "foundedYear": 2010,
     "priceRangeLow": 15,
     "priceRangeHigh": 50,
     "status": "Active",
@@ -1797,26 +1797,26 @@
     "website": "https://www.yazolewatches.com/",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Yazole is a professional manufacturer and supplier of wristwatches established in 2010 by Shantou Yazole Trading Co., Ltd in China. The brand produces ladies, mens, and kids watches, featuring elegant designs particularly for women with slim fit styles."
   },
   {
     "brandName": "Zealandic",
     "country": "New Zealand",
-    "townCity": null,
-    "foundedYear": null,
+    "townCity": "Auckland",
+    "foundedYear": 2021,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "Iceborne",
+    "lastActivityDate": "2024-08-01",
     "website": "https://www.zealandic.com",
     "instagramHandle": null,
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "New Zealand microbrand founded in 2021 by Derek Chuan, a mechanical engineer. Inspired by New Zealand's colours and textures, known for field watches like the Iceborne with legible dial layouts."
   },
   {
     "brandName": "Zenmuz",
-    "country": "Hong Kong",
+    "country": "Indonesia",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": 349,
@@ -1827,7 +1827,7 @@
     "website": "https://zentier.com/",
     "instagramHandle": "zentierofficial",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Indonesian watch brand focused on timeless design and high quality products with good value for money. Operates as a local brand with stainless steel watch cases."
   },
   {
     "brandName": "Zentier",
@@ -1842,7 +1842,7 @@
     "website": "https://zentier.com/",
     "instagramHandle": "zentierofficial",
     "source": "MBWDB",
-    "notes": "Unknown brand — manual review needed"
+    "notes": "Zentier is a microbrand founded by Morten Loewe, a former World, European, and British Open Latin American Dance-Sport Champion. The brand creates watches designed for the modern gentleman with elegance and timeless style. Known for models featuring unique complications like jumping hour mechanisms and natural stone dials."
   },
   {
     "brandName": "Zeroo Time",
@@ -1852,8 +1852,8 @@
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
-    "lastActivityDate": null,
+    "latestModel": "ZEROO MODERN",
+    "lastActivityDate": "2026-04-04",
     "website": "https://www.zeroo.jp",
     "instagramHandle": null,
     "source": "MBWDB",
@@ -1861,13 +1861,13 @@
   },
   {
     "brandName": "Ztage",
-    "country": "China",
-    "townCity": "Kowloon, Hong Kong, China",
-    "foundedYear": null,
+    "country": "Hong Kong",
+    "townCity": "Hong Kong",
+    "foundedYear": 2017,
     "priceRangeLow": null,
     "priceRangeHigh": null,
     "status": "Active",
-    "latestModel": null,
+    "latestModel": "Hybrid Original Calendar",
     "lastActivityDate": null,
     "website": "https://www.ztage.com",
     "instagramHandle": null,
