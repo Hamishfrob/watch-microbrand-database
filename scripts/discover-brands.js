@@ -24,6 +24,7 @@ const path      = require('path');
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 const DATA_DIR       = path.join(__dirname, '..', 'data');
+const EXCLUDED_FILE  = path.join(DATA_DIR, 'excluded.json');
 const MODEL          = 'claude-haiku-4-5';
 const FETCH_TIMEOUT  = 10_000;
 const MAX_PAGE_CHARS = 6_000;
@@ -67,6 +68,22 @@ const BLOCKLIST = new Set([
   'hamilton',
 ].map(n => n.replace(/[^a-z0-9]/g, '')));
 
+// ─── Persistent exclusions ────────────────────────────────────────────────────
+// data/excluded.json holds clockmakers, repair shops, and other non-watch brands
+// discovered during sweeps. Edit that file to permanently exclude a name —
+// no code changes needed. Supports both string arrays and [{name, reason}] arrays.
+
+function loadExclusions() {
+  if (!fs.existsSync(EXCLUDED_FILE)) return new Set();
+  const list = JSON.parse(fs.readFileSync(EXCLUDED_FILE, 'utf8'));
+  return new Set(list.map(e => {
+    const name = typeof e === 'string' ? e : (e.name || '');
+    return name.toLowerCase().replace(/[^a-z0-9]/g, '');
+  }).filter(Boolean));
+}
+
+const EFFECTIVE_BLOCKLIST = new Set([...BLOCKLIST, ...loadExclusions()]);
+
 // ─── Sites ────────────────────────────────────────────────────────────────────
 
 const SITES = [
@@ -109,6 +126,12 @@ const SITES = [
     name: 'Chrononautix',
     url:  'https://chrononautix.com/',
     type: 'blog',
+  },
+  {
+    name:   'British Watchmakers',
+    url:    'https://britishwatchmakers.com/the-makers/',
+    type:   'directory',
+    parser: 'british-watchmakers',
   },
 ];
 
@@ -264,6 +287,31 @@ function parseDirectory(html, siteUrl) {
   return brandNames;
 }
 
+// ─── British Watchmakers directory parser ─────────────────────────────────────
+
+function parseBritishWatchmakers(html) {
+  const brandNames = [];
+  // Names appear in <h3> tags on the makers directory page
+  const re = /<h3[^>]*>([^<]+)<\/h3>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const raw = m[1].trim()
+      .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ');
+    // Skip booking widget and non-brand h3 tags
+    if (/select|time slot/i.test(raw)) continue;
+    // Normalise ALL-CAPS display names (the site uses caps for styling).
+    // Convert word-by-word: short words that are all-caps are likely acronyms
+    // (GMT, FWM, IWI) and stay uppercase; longer words title-case.
+    const isAllCaps = raw === raw.toUpperCase();
+    const name = isAllCaps
+      ? raw.replace(/\b([A-Z]+)\b/g, w => (w.length <= 4 ? w : w.charAt(0) + w.slice(1).toLowerCase()))
+      : raw;
+    if (name) brandNames.push(name);
+  }
+  return brandNames;
+}
+
 // ─── Claude extraction ───────────────────────────────────────────────────────
 
 async function extractBrandsFromArticle(text) {
@@ -303,7 +351,7 @@ function processBrands(foundNames, lookup, sourceSite, sourceUrl) {
   for (const name of foundNames) {
     const key   = normaliseName(name);
     if (!key) continue;
-    if (BLOCKLIST.has(key)) continue;  // skip known non-microbrands
+    if (EFFECTIVE_BLOCKLIST.has(key)) continue;  // skip known non-microbrands + excluded.json
     const match = lookup.get(key);
 
     if (match) {
@@ -376,7 +424,11 @@ async function main() {
     let brandNames = [];
 
     if (site.type === 'directory') {
-      brandNames = parseDirectory(page.html, site.url);
+      if (site.parser === 'british-watchmakers') {
+        brandNames = parseBritishWatchmakers(page.html);
+      } else {
+        brandNames = parseDirectory(page.html, site.url);
+      }
       console.log(`  parsed ${brandNames.length} brands (no AI)`);
 
     } else {

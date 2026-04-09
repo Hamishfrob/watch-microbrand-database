@@ -1,0 +1,20 @@
+[
+  { "name": "Anthony Gray Clocks",    "reason": "clockmaker — bespoke fine clock replicas and commissions" },
+  { "name": "Canavan",                "reason": "clockmaker — exterior clock manufacturers and public clock specialists" },
+  { "name": "Comitti",                "reason": "clockmaker/barometer maker — not a watch brand" },
+  { "name": "Cumbria Clock Company",  "reason": "clockmaker — prestigious clock restoration incl. Westminster Clock" },
+  { "name": "Good Directions",        "reason": "clockmaker — UK architectural clock manufacturer, exterior clocks" },
+  { "name": "Grayson",                "reason": "clockmaker — clock installation and manufacture for architects/designers" },
+  { "name": "Hawkins Clock Company",  "reason": "clockmaker — external clocks, towers, and weathervanes since 1989" },
+  { "name": "Horologium Precision",            "reason": "clockmaker — traditional clock manufacturer, bespoke commissions" },
+  { "name": "Tommy Jobson",                    "reason": "clockmaker — listed as 'Tommy Jobson - Horologium Precision'" },
+  { "name": "Tommy Jobson - Horologium Precision", "reason": "clockmaker — combined listing name on britishwatchmakers.com" },
+  { "name": "Roger W. Smith",                  "reason": "luxury atelier — sought-after handmade watches, well above $5k ceiling" },
+  { "name": "Shire Clocks",           "reason": "clockmaker — exterior clock features for houses, schools, civic spaces" },
+  { "name": "Sinclair Harding",       "reason": "clockmaker — English clockmaking tradition, hand-crafted clocks since 1967" },
+  { "name": "Smith of Derby",         "reason": "clockmaker — world-renowned public clockmakers since 1856" },
+  { "name": "Thomas James",           "reason": "clockmaker — English clock company, contemporary designs for interiors" },
+  { "name": "Time Traveller",         "reason": "clockmaker — recreates historic wooden clocks, bespoke designs" },
+  { "name": "Tobias Birch",           "reason": "clockmaker/antique dealer — antique clocks, chronometers, restoration" },
+  { "name": "Horological Underground","reason": "repair shop — not a watch brand" }
+]
