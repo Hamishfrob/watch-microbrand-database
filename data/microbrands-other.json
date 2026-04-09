@@ -557,7 +557,7 @@
   {
     "brandName": "Bolido",
     "country": "Switzerland",
-    "townCity": null,
+    "townCity": "Bangkok",
     "foundedYear": null,
     "priceRangeLow": null,
     "priceRangeHigh": null,
@@ -901,7 +901,7 @@
   },
   {
     "brandName": "Cronos",
-    "country": null,
+    "country": "China",
     "townCity": null,
     "foundedYear": null,
     "priceRangeLow": 49,
@@ -2303,7 +2303,7 @@
     "priceRangeHigh": 500,
     "status": "Active",
     "latestModel": "Invader",
-    "lastActivityDate": null,
+    "lastActivityDate": "2026-01-01",
     "website": "https://poshmark.com/brand/MAGICO-Men",
     "instagramHandle": "poshmark",
     "source": "MBWDB",
@@ -2537,7 +2537,7 @@
   {
     "brandName": "Mitch Mason",
     "country": "Singapore",
-    "townCity": null,
+    "townCity": "Singapore",
     "foundedYear": 2019,
     "priceRangeLow": null,
     "priceRangeHigh": null,
@@ -4562,7 +4562,7 @@
   {
     "brandName": "Wrist Hardware",
     "country": "United States",
-    "townCity": "Los Angeles",
+    "townCity": "Austin",
     "foundedYear": null,
     "priceRangeLow": 300,
     "priceRangeHigh": 300,
