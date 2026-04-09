@@ -16,12 +16,15 @@
 //   5. For brands with no website: ask Haiku from knowledge only
 //
 // Flags:
-//   --region europe|americas|asia-pacific  (default: all three)
-//   --limit N                              (default: unlimited)
-//   --force                                (overwrite fields that already have data)
+//   --region europe|americas|asia-pacific|other  (default: all four)
+//   --limit N                                    (default: unlimited)
+//   --force                                      (overwrite all fields that already have data)
+//   --force-location                             (overwrite country/townCity only — for fixing wrong locations)
+//   --brands "Name1,Name2"                       (only enrich these specific brands, any region)
 //
 // Run:              node scripts/re-enrich.js
 // One region:       node scripts/re-enrich.js --region europe
+// Specific brands:  node scripts/re-enrich.js --brands "Wren,Nezumi,Pionier"
 // Dry test:         node scripts/re-enrich.js --region europe --limit 5
 // Monthly refresh:  node scripts/re-enrich.js --force
 
@@ -47,7 +50,13 @@ const REGION_ARG = process.argv.includes('--region')
   ? process.argv[process.argv.indexOf('--region') + 1]
   : null;
 
-const FORCE = process.argv.includes('--force');
+const FORCE          = process.argv.includes('--force');
+const FORCE_LOCATION = process.argv.includes('--force-location'); // overwrite country/townCity even if set
+
+// --brands "Name1,Name2" — target only these specific brands (matched case-insensitively)
+const BRANDS_ARG = process.argv.includes('--brands')
+  ? new Set(process.argv[process.argv.indexOf('--brands') + 1].split(',').map(s => s.trim().toLowerCase()))
+  : null;
 
 const REGION_FILES = {
   'europe':       'microbrands-europe.json',
@@ -203,7 +212,7 @@ Rules:
 // ─── Per-brand processor ──────────────────────────────────────────────────────
 
 async function processBrand(client, brand, filename, data) {
-  if (!needsWork(brand)) return 'skip';
+  if (!BRANDS_ARG && !needsWork(brand)) return 'skip';
 
   let homeText = null, shopText = null;
 
@@ -241,8 +250,13 @@ async function processBrand(client, brand, filename, data) {
     'foundedYear', 'latestModel',
     'status', 'lastActivityDate', 'notes',
   ];
+  const locationFields = new Set(['country', 'townCity']);
+  const isUnknownNotes = brand.notes === 'Unknown brand — manual review needed';
   for (const f of fields) {
-    if (extracted[f] != null && (brand[f] == null || FORCE)) {
+    const forceThis = FORCE
+      || (FORCE_LOCATION && locationFields.has(f))
+      || (isUnknownNotes && f === 'notes');
+    if (extracted[f] != null && (brand[f] == null || forceThis)) {
       brand[f] = extracted[f];
     }
   }
@@ -276,13 +290,16 @@ async function run() {
     process.exit(1);
   }
 
-  const regions = REGION_ARG ? { [REGION_ARG]: REGION_FILES[REGION_ARG] } : REGION_FILES;
+  // --brands searches all regions; --region still narrows when used alone
+  const regions = (BRANDS_ARG || !REGION_ARG) ? REGION_FILES : { [REGION_ARG]: REGION_FILES[REGION_ARG] };
 
   let totalDone = 0, totalSkipped = 0, totalErrors = 0, totalNoData = 0;
 
   for (const [region, filename] of Object.entries(regions)) {
     const data  = load(filename);
-    const toProcess = data.filter(needsWork).slice(0, LIMIT);
+    const toProcess = data
+      .filter(b => BRANDS_ARG ? BRANDS_ARG.has(b.brandName.toLowerCase()) : needsWork(b))
+      .slice(0, LIMIT);
 
     if (toProcess.length === 0) {
       console.log(`\n${region}: nothing to re-enrich (use --force to refresh)`);

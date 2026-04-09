@@ -2790,6 +2790,21 @@
     "notes": "DIRENZO is an active watch brand with a tagline 'Love for Speed.' Current collection includes models DRZ 04R, DRZ 06, and DRZ 07, with several sold-out historical models. Country of origin and specific pricing information not available from provided content."
   },
   {
+    "brandName": "District London",
+    "country": "United Kingdom",
+    "townCity": null,
+    "foundedYear": null,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": null,
+    "lastActivityDate": "2026-04-09",
+    "website": null,
+    "instagramHandle": null,
+    "source": "manual",
+    "notes": "Insufficient reliable training data available for District London watch brand to provide confident extraction."
+  },
+  {
     "brandName": "Division Furtive Watches",
     "country": "Canada",
     "townCity": null,
@@ -6750,6 +6765,21 @@
     "notes": "British watchmaking brand founded in 1875, revived in recent years. Known for pilot chronographs, field watches, and dive watches inspired by Victorian pocket watches and RAF aviation heritage. Creates robust, durable timepieces for watch enthusiasts."
   },
   {
+    "brandName": "Nezumi",
+    "country": "Sweden",
+    "townCity": "Stockholm",
+    "foundedYear": 2011,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Corbeau",
+    "lastActivityDate": "2024-12-19",
+    "website": "https://nezumistudios.com",
+    "instagramHandle": "nezumistudios",
+    "source": "manual",
+    "notes": "Swedish watch brand founded in 2011 known for vintage-inspired tool watches. Swedish design with watches assembled in Germany. Offers multiple collections including chronographs, GMT, field, and dive watches."
+  },
+  {
     "brandName": "NIMA Watches",
     "country": "Italy",
     "townCity": "Lucca",
@@ -7393,6 +7423,21 @@
     "instagramHandle": "pinionwatches",
     "source": "existing-db",
     "notes": "Designed, assembled and tested in South Oxfordshire by founder Piers Berry since 2013. Movements sourced from Switzerland/Germany, final assembly UK. Small independent operation."
+  },
+  {
+    "brandName": "Pionier",
+    "country": "Germany",
+    "townCity": "Munich",
+    "foundedYear": 2004,
+    "priceRangeLow": null,
+    "priceRangeHigh": null,
+    "status": "Active",
+    "latestModel": "Tourbillon",
+    "lastActivityDate": "2026-04-09",
+    "website": "https://pionierwatches.com/",
+    "instagramHandle": "tufina_watches",
+    "source": "manual",
+    "notes": "German independent microbrand founded in 2004 and family-owned. Pionier specializes in individually-made mechanical watches combining pure mechanics with modern design, never mass-produced. Based in Munich, offering multiple collections named after global cities."
   },
   {
     "brandName": "Pita Barcelona",
